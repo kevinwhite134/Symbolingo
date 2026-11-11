@@ -1,0 +1,238 @@
+[
+  {
+    "id": "epsilon-delta",
+    "title": "Epsilon–delta implication",
+    "notation": "0 < |x−a| < δ ⇒ |f(x)−L| < ε",
+    "parts": [
+      [
+        "0 < |x−a| < δ",
+        "If x is within δ of a but different from a,"
+      ],
+      [
+        "⇒ |f(x)−L| < ε",
+        "then f(x) is within ε of L."
+      ]
+    ],
+    "example": "For f(x) = 2x, a = 1 and L = 2, choose δ = ε/2 to make the implication hold.",
+    "note": "In a limit proof, a suitable δ is chosen for every ε > 0.",
+    "wrong": [
+      "The difference between x and a must exceed δ.",
+      "δ is chosen once and works for every function."
+    ],
+    "aliases": [
+      "epsilon delta",
+      "epsilon",
+      "δ",
+      "ε"
+    ],
+    "uni": "analysis"
+  },
+  {
+    "id": "supremum",
+    "title": "Supremum",
+    "notation": "sup S",
+    "parts": [
+      [
+        "sup S",
+        "The least upper bound of S."
+      ]
+    ],
+    "example": "sup(0,1) = 1 even though 1 is not in the interval.",
+    "note": "The supremum is a maximum only when it belongs to the set.",
+    "wrong": [
+      "The greatest member of S, which must always exist.",
+      "The greatest lower bound of S."
+    ],
+    "aliases": [
+      "sup",
+      "least upper bound"
+    ],
+    "uni": "analysis"
+  },
+  {
+    "id": "infimum",
+    "title": "Infimum",
+    "notation": "inf S",
+    "parts": [
+      [
+        "inf S",
+        "The greatest lower bound of S."
+      ]
+    ],
+    "example": "inf(0,1) = 0 even though 0 is excluded.",
+    "note": "Every element of S is at least its infimum when it exists.",
+    "wrong": [
+      "The least upper bound of S.",
+      "The smallest member, which always belongs to S."
+    ],
+    "aliases": [
+      "inf",
+      "greatest lower bound"
+    ],
+    "uni": "analysis"
+  },
+  {
+    "id": "sequence-limit",
+    "title": "Sequence convergence",
+    "notation": "aₙ → L",
+    "parts": [
+      [
+        "aₙ → L",
+        "The terms aₙ approach L as n tends to infinity."
+      ]
+    ],
+    "example": "1/n → 0 as n grows, although no term is zero.",
+    "note": "Converging to L does not require reaching L.",
+    "wrong": [
+      "Every term equals L.",
+      "The series of all terms always sums to L."
+    ],
+    "aliases": [
+      "sequence convergence",
+      "tends to"
+    ],
+    "uni": "analysis"
+  },
+  {
+    "id": "cauchy-sequence",
+    "title": "Cauchy condition",
+    "notation": "d(xₙ,xₘ) < ε",
+    "parts": [
+      [
+        "d(xₙ,xₘ) < ε",
+        "The distance between sufficiently late terms can be made smaller than any ε > 0."
+      ]
+    ],
+    "example": "For xₙ = 1/n, take n,m > 2/ε to ensure |1/n − 1/m| < ε.",
+    "note": "The condition compares two terms. It does not name a limiting point.",
+    "wrong": [
+      "Every term must be within ε of x₁.",
+      "The sequence is constant from some index onwards."
+    ],
+    "aliases": [
+      "cauchy",
+      "cauchy sequence"
+    ],
+    "uni": "analysis"
+  },
+  {
+    "id": "complex-conjugate",
+    "title": "Complex conjugate",
+    "notation": "z̄ = a − bi",
+    "parts": [
+      [
+        "z̄ = a − bi",
+        "The conjugate of z = a + bi reverses the imaginary part."
+      ]
+    ],
+    "example": "The conjugate of 3 + 2i is 3 − 2i.",
+    "note": "Conjugation leaves the real part alone.",
+    "wrong": [
+      "Change only the sign of the real part.",
+      "Replace z with its magnitude."
+    ],
+    "aliases": [
+      "conjugate",
+      "z bar",
+      "complex conjugate"
+    ],
+    "uni": "analysis",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "complex-modulus",
+    "title": "Modulus of a complex number",
+    "notation": "|z| = √(a² + b²)",
+    "parts": [
+      [
+        "|z| = √(a² + b²)",
+        "The distance of z = a + bi from the origin."
+      ]
+    ],
+    "example": "For z = 3 + 4i, |z| = 5.",
+    "note": "The modulus is a non-negative real number.",
+    "wrong": [
+      "The magnitude of the imaginary part alone.",
+      "The complex conjugate of z."
+    ],
+    "aliases": [
+      "modulus",
+      "complex modulus",
+      "|z|"
+    ],
+    "uni": "analysis",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    },
+    "meaning": "vertical-bars"
+  },
+  {
+    "id": "complex-argument",
+    "title": "Argument of a complex number",
+    "notation": "arg(z)",
+    "parts": [
+      [
+        "arg(z)",
+        "An angle from the positive real axis to the nonzero complex number z."
+      ]
+    ],
+    "example": "For z = i, an argument is π/2.",
+    "note": "Arguments can differ by multiples of 2π. A principal argument chooses a standard range.",
+    "wrong": [
+      "The distance from z to the origin.",
+      "The real part of z."
+    ],
+    "aliases": [
+      "arg",
+      "argument",
+      "phase"
+    ],
+    "uni": "analysis",
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.4",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "contour-integral",
+    "title": "Contour integral",
+    "notation": "∮γ f(z) dz",
+    "parts": [
+      [
+        "∮γ",
+        "Integrate along the closed curve γ"
+      ],
+      [
+        "f(z) dz",
+        "the complex function f with respect to z."
+      ]
+    ],
+    "example": "∮γ 1/z dz = 2πi on the positively oriented unit circle.",
+    "note": "Orientation matters. Reversing the path reverses the sign.",
+    "wrong": [
+      "Integrate the real part only between two real endpoints.",
+      "Find the length of γ regardless of f."
+    ],
+    "aliases": [
+      "contour integral",
+      "closed integral",
+      "∮"
+    ],
+    "uni": "analysis"
+  }
+]

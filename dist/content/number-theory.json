@@ -1,0 +1,260 @@
+[
+  {
+    "id": "real-numbers",
+    "title": "Real numbers",
+    "notation": "x ∈ ℝ",
+    "parts": [
+      [
+        "x",
+        "x"
+      ],
+      [
+        "∈",
+        "is a member of"
+      ],
+      [
+        "ℝ",
+        "the real numbers."
+      ]
+    ],
+    "example": "−2, 0, 1/2, √2 and π are real numbers.",
+    "note": "ℕ conventions vary on whether 0 is included. ℤ = integers, ℚ = rational numbers.",
+    "wrong": [
+      "x must be a positive integer.",
+      "x must be a rational number only.",
+      "x is a set of real numbers."
+    ],
+    "aliases": [
+      "ℝ",
+      "real numbers",
+      "number sets"
+    ],
+    "legacyId": 24,
+    "uni": "number-theory",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "absolute-value",
+    "title": "Absolute value",
+    "notation": "|−5| = 5",
+    "parts": [
+      [
+        "|−5|",
+        "The distance of −5 from zero"
+      ],
+      [
+        "= 5",
+        "is 5."
+      ]
+    ],
+    "example": "Both |−5| and |5| equal 5.",
+    "note": "For a number, bars mean absolute value; for a set, bars count its elements.",
+    "wrong": [
+      "Negative five has five set elements.",
+      "The square of negative five is five.",
+      "Negative five equals positive five."
+    ],
+    "aliases": [
+      "|x|",
+      "absolute value",
+      "modulus",
+      "|x|"
+    ],
+    "legacyId": 25,
+    "uni": "number-theory",
+    "meaning": "vertical-bars",
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "floor",
+    "title": "Floor function",
+    "notation": "⌊3.7⌋ = 3",
+    "parts": [
+      [
+        "⌊3.7⌋",
+        "Round 3.7 down to the greatest integer no larger than it"
+      ],
+      [
+        "= 3",
+        "to get 3."
+      ]
+    ],
+    "example": "⌊−2.3⌋ = −3, not −2.",
+    "note": "Floor rounds toward negative infinity, not simply toward zero.",
+    "wrong": [
+      "Round 3.7 to the nearest integer, giving 3.",
+      "Round 3.7 up, giving 3.",
+      "Take the fractional part of 3.7, giving 3."
+    ],
+    "aliases": [
+      "floor",
+      "⌊ ⌋",
+      "round down"
+    ],
+    "legacyId": 26,
+    "uni": "number-theory"
+  },
+  {
+    "id": "ceiling",
+    "title": "Ceiling function",
+    "notation": "⌈3.2⌉ = 4",
+    "parts": [
+      [
+        "⌈3.2⌉",
+        "Round 3.2 up to the smallest integer no smaller than it"
+      ],
+      [
+        "= 4",
+        "to get 4."
+      ]
+    ],
+    "example": "⌈−2.3⌉ = −2.",
+    "note": "Ceiling is useful for the number of batches when a partial batch still counts.",
+    "wrong": [
+      "Round 3.2 down to get 4.",
+      "Multiply 3.2 by itself to get 4.",
+      "Take the integer part of 3.2 to get 4."
+    ],
+    "aliases": [
+      "ceil",
+      "ceiling",
+      "⌈ ⌉",
+      "round up"
+    ],
+    "legacyId": 27,
+    "uni": "number-theory"
+  },
+  {
+    "id": "congruence-modulo",
+    "title": "Congruence modulo n",
+    "notation": "a ≡ b (mod n)",
+    "parts": [
+      [
+        "a ≡ b",
+        "a and b have the same remainder"
+      ],
+      [
+        "(mod n)",
+        "when divided by n."
+      ]
+    ],
+    "example": "17 ≡ 5 (mod 12), because both leave remainder 5.",
+    "note": "Equivalently, n divides a − b. This appears in shift ciphers.",
+    "wrong": [
+      "a and b must be exactly equal.",
+      "a divided by b equals n.",
+      "n is the remainder of a divided by b."
+    ],
+    "aliases": [
+      "≡",
+      "mod",
+      "modulo",
+      "congruence"
+    ],
+    "legacyId": 30,
+    "uni": "number-theory"
+  },
+  {
+    "id": "divisibility",
+    "title": "Divisibility",
+    "notation": "a ∣ b",
+    "parts": [
+      [
+        "a ∣ b",
+        "a divides b without remainder."
+      ]
+    ],
+    "example": "3 ∣ 12 because 12 = 3 × 4.",
+    "note": "The divisor is on the left.",
+    "wrong": [
+      "b divides a without remainder.",
+      "a is the quotient of b and 2."
+    ],
+    "aliases": [
+      "divides",
+      "divisor",
+      "a|b"
+    ],
+    "uni": "number-theory"
+  },
+  {
+    "id": "greatest-common-divisor",
+    "title": "Greatest common divisor",
+    "notation": "gcd(a,b)",
+    "parts": [
+      [
+        "gcd(a,b)",
+        "The greatest positive integer dividing both a and b."
+      ]
+    ],
+    "example": "gcd(18,24) = 6.",
+    "note": "The greatest common divisor is no larger than either positive input.",
+    "wrong": [
+      "The smallest positive multiple of both a and b.",
+      "The product of a and b."
+    ],
+    "aliases": [
+      "gcd",
+      "hcf",
+      "highest common factor"
+    ],
+    "uni": "number-theory"
+  },
+  {
+    "id": "least-common-multiple",
+    "title": "Least common multiple",
+    "notation": "lcm(a,b)",
+    "parts": [
+      [
+        "lcm(a,b)",
+        "The smallest positive integer that is a multiple of both a and b."
+      ]
+    ],
+    "example": "lcm(6,8) = 24.",
+    "note": "The least common multiple is the product only when positive inputs are coprime.",
+    "wrong": [
+      "The largest integer dividing both inputs.",
+      "The smaller of a and b."
+    ],
+    "aliases": [
+      "lcm",
+      "least common multiple"
+    ],
+    "uni": "number-theory"
+  },
+  {
+    "id": "prime-valuation",
+    "title": "Prime valuation",
+    "notation": "vₚ(n)",
+    "parts": [
+      [
+        "vₚ(n)",
+        "The exponent of the prime p in the factorisation of the positive integer n."
+      ]
+    ],
+    "example": "v₂(12) = 2 because 12 = 2² × 3.",
+    "note": "The subscript chooses the prime, while the result is an exponent.",
+    "wrong": [
+      "The pth prime number after n.",
+      "The number of distinct prime factors of n."
+    ],
+    "aliases": [
+      "valuation",
+      "p-adic valuation"
+    ],
+    "uni": "number-theory"
+  }
+]

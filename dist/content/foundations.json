@@ -1,0 +1,600 @@
+[
+  {
+    "id": "universal-quantifier",
+    "title": "For all",
+    "notation": "∀x ∈ S, P(x)",
+    "parts": [
+      [
+        "∀x",
+        "For every x"
+      ],
+      [
+        "∈ S",
+        "in the set S"
+      ],
+      [
+        ", P(x)",
+        "the statement P(x) is true."
+      ]
+    ],
+    "example": "If S = {2, 4, 6} and P(x) means “x is even”, this is true.",
+    "note": "∀ means every, so one counterexample makes the whole statement false.",
+    "wrong": [
+      "At least one x in S makes P(x) true.",
+      "No x in S makes P(x) true.",
+      "Exactly one x in S makes P(x) true."
+    ],
+    "aliases": [
+      "∀",
+      "forall",
+      "universal quantifier"
+    ],
+    "legacyId": 0,
+    "uni": "foundations"
+  },
+  {
+    "id": "existential-quantifier",
+    "title": "There exists",
+    "notation": "∃x ∈ S : P(x)",
+    "parts": [
+      [
+        "∃x",
+        "There is at least one x"
+      ],
+      [
+        "∈ S",
+        "in the set S"
+      ],
+      [
+        ": P(x)",
+        "such that P(x) is true."
+      ]
+    ],
+    "example": "In {1, 2, 3}, there is an even number: 2.",
+    "note": "The colon means “such that” here, not division.",
+    "wrong": [
+      "Every x in S makes P(x) true.",
+      "Exactly one x in S must make P(x) true.",
+      "P(x) is false for every x in S."
+    ],
+    "aliases": [
+      "∃",
+      "exists",
+      "existential quantifier"
+    ],
+    "legacyId": 1,
+    "uni": "foundations"
+  },
+  {
+    "id": "unique-existence",
+    "title": "Exactly one exists",
+    "notation": "∃!x : P(x)",
+    "parts": [
+      [
+        "∃!x",
+        "There is exactly one x"
+      ],
+      [
+        ": P(x)",
+        "such that P(x) is true."
+      ]
+    ],
+    "example": "There is exactly one integer x with x + 2 = 5: x = 3.",
+    "note": "The exclamation mark adds uniqueness.",
+    "wrong": [
+      "There is at least one x, possibly many, with P(x) true.",
+      "Every x makes P(x) true.",
+      "There is no x that makes P(x) true."
+    ],
+    "aliases": [
+      "∃!",
+      "exists unique"
+    ],
+    "legacyId": 2,
+    "uni": "foundations"
+  },
+  {
+    "id": "implication",
+    "title": "Implication",
+    "notation": "p ⇒ q",
+    "parts": [
+      [
+        "p",
+        "If p is true"
+      ],
+      [
+        "⇒",
+        "then"
+      ],
+      [
+        "q",
+        "q is true."
+      ]
+    ],
+    "example": "If it is a square, then it has four sides.",
+    "note": "This does not say q implies p. A false premise does not make the implication false.",
+    "wrong": [
+      "If q is true, then p is true.",
+      "p and q are both false.",
+      "p is true and q is false."
+    ],
+    "aliases": [
+      "⇒",
+      "implies",
+      "if then"
+    ],
+    "legacyId": 3,
+    "uni": "foundations",
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "biconditional",
+    "title": "If and only if",
+    "notation": "p ⇔ q",
+    "parts": [
+      [
+        "p",
+        "p is true"
+      ],
+      [
+        "⇔",
+        "if and only if"
+      ],
+      [
+        "q",
+        "q is true."
+      ]
+    ],
+    "example": "An integer is even if and only if it is divisible by 2.",
+    "note": "Both directions must hold: p ⇒ q and q ⇒ p.",
+    "wrong": [
+      "Only p implies q; the reverse need not hold.",
+      "Exactly one of p and q is true.",
+      "p and q must both be true."
+    ],
+    "aliases": [
+      "⇔",
+      "iff",
+      "biconditional"
+    ],
+    "legacyId": 4,
+    "uni": "foundations",
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "logical-and",
+    "title": "Logical AND",
+    "notation": "p ∧ q",
+    "parts": [
+      [
+        "p",
+        "p is true"
+      ],
+      [
+        "∧",
+        "and"
+      ],
+      [
+        "q",
+        "q is true."
+      ]
+    ],
+    "example": "“x > 0 AND x < 10” requires both conditions.",
+    "note": "AND may also appear as && in code, or a dot in Boolean algebra.",
+    "wrong": [
+      "Only the truth of p is required.",
+      "Exactly one of p and q must be true.",
+      "At least one may be false while the statement still holds."
+    ],
+    "aliases": [
+      "∧",
+      "and",
+      "conjunction"
+    ],
+    "legacyId": 5,
+    "uni": "foundations"
+  },
+  {
+    "id": "logical-or",
+    "title": "Inclusive OR",
+    "notation": "p ∨ q",
+    "parts": [
+      [
+        "p",
+        "p is true"
+      ],
+      [
+        "∨",
+        "or"
+      ],
+      [
+        "q",
+        "q is true (or both are true)."
+      ]
+    ],
+    "example": "x = 2 satisfies “x is even OR x is positive”, since both are true.",
+    "note": "Mathematical OR is inclusive unless stated otherwise.",
+    "wrong": [
+      "Exactly one of p and q is true.",
+      "Both p and q must be true.",
+      "Neither p nor q is true."
+    ],
+    "aliases": [
+      "∨",
+      "or",
+      "disjunction"
+    ],
+    "legacyId": 6,
+    "uni": "foundations"
+  },
+  {
+    "id": "negation",
+    "title": "Logical negation",
+    "notation": "¬p",
+    "parts": [
+      [
+        "¬",
+        "It is not the case that"
+      ],
+      [
+        "p",
+        "p is true."
+      ]
+    ],
+    "example": "If p is “5 is even”, ¬p is true.",
+    "note": "Negating “every” gives “there exists a counterexample”.",
+    "wrong": [
+      "p is definitely true.",
+      "p implies itself.",
+      "p and another statement are true."
+    ],
+    "aliases": [
+      "¬",
+      "not",
+      "negation"
+    ],
+    "legacyId": 7,
+    "uni": "foundations"
+  },
+  {
+    "id": "exclusive-or",
+    "title": "Exclusive OR",
+    "notation": "p ⊕ q",
+    "parts": [
+      [
+        "p",
+        "p is true"
+      ],
+      [
+        "⊕",
+        "or, exclusively,"
+      ],
+      [
+        "q",
+        "q is true: exactly one is true."
+      ]
+    ],
+    "example": "True ⊕ True = False; True ⊕ False = True.",
+    "note": "XOR differs from OR when both inputs are true.",
+    "wrong": [
+      "At least one is true, including when both are true.",
+      "Both are true.",
+      "Neither is true."
+    ],
+    "aliases": [
+      "⊕",
+      "xor",
+      "exclusive or"
+    ],
+    "legacyId": 8,
+    "uni": "foundations"
+  },
+  {
+    "id": "set-membership",
+    "title": "Set membership",
+    "notation": "x ∈ S",
+    "parts": [
+      [
+        "x",
+        "x"
+      ],
+      [
+        "∈",
+        "is an element of"
+      ],
+      [
+        "S",
+        "the set S."
+      ]
+    ],
+    "example": "3 ∈ {1, 3, 5} means 3 is one of the members.",
+    "note": "∈ compares an element with a set; ⊆ compares sets.",
+    "wrong": [
+      "x is a subset of S.",
+      "S is an element of x.",
+      "x is not in S."
+    ],
+    "aliases": [
+      "∈",
+      "element of",
+      "in set"
+    ],
+    "legacyId": 9,
+    "uni": "foundations"
+  },
+  {
+    "id": "subset",
+    "title": "Subset",
+    "notation": "A ⊆ B",
+    "parts": [
+      [
+        "A",
+        "Every element of A"
+      ],
+      [
+        "⊆",
+        "also belongs to"
+      ],
+      [
+        "B",
+        "B."
+      ]
+    ],
+    "example": " {1, 2} ⊆ {1, 2, 3}. A and B may also be equal.",
+    "note": "⊆ allows equality. We use ⊊ for a proper subset.",
+    "wrong": [
+      "A and B have no shared elements.",
+      "A must contain B.",
+      "A is one individual element of B."
+    ],
+    "aliases": [
+      "⊆",
+      "subset",
+      "inclusion"
+    ],
+    "legacyId": 10,
+    "uni": "foundations"
+  },
+  {
+    "id": "union",
+    "title": "Union of sets",
+    "notation": "A ∪ B",
+    "parts": [
+      [
+        "A",
+        "The elements in A"
+      ],
+      [
+        "∪",
+        "together with those in"
+      ],
+      [
+        "B",
+        "B, with duplicates removed."
+      ]
+    ],
+    "example": " {1, 2} ∪ {2, 3} = {1, 2, 3}.",
+    "note": "Union is the set version of inclusive OR.",
+    "wrong": [
+      "Only elements in both A and B.",
+      "Elements in A but not in B.",
+      "Ordered pairs from A and B."
+    ],
+    "aliases": [
+      "∪",
+      "union",
+      "cup"
+    ],
+    "legacyId": 11,
+    "uni": "foundations",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "intersection",
+    "title": "Intersection of sets",
+    "notation": "A ∩ B",
+    "parts": [
+      [
+        "A",
+        "The elements in A"
+      ],
+      [
+        "∩",
+        "that are also in"
+      ],
+      [
+        "B",
+        "B."
+      ]
+    ],
+    "example": " {1, 2} ∩ {2, 3} = {2}.",
+    "note": "Intersection is the set version of AND.",
+    "wrong": [
+      "All elements in either A or B.",
+      "Elements in A but not B.",
+      "The number of elements in B."
+    ],
+    "aliases": [
+      "∩",
+      "intersection",
+      "cap"
+    ],
+    "legacyId": 12,
+    "uni": "foundations",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "set-difference",
+    "title": "Set difference",
+    "notation": "A ∖ B",
+    "parts": [
+      [
+        "A",
+        "The elements of A"
+      ],
+      [
+        "∖",
+        "excluding any that are in"
+      ],
+      [
+        "B",
+        "B."
+      ]
+    ],
+    "example": " {1, 2, 3} ∖ {2, 4} = {1, 3}.",
+    "note": "Set difference is directional: A ∖ B can differ from B ∖ A.",
+    "wrong": [
+      "Elements shared by A and B.",
+      "Elements of B excluding A.",
+      "Every element of either set."
+    ],
+    "aliases": [
+      "∖",
+      "setminus",
+      "difference"
+    ],
+    "legacyId": 13,
+    "uni": "foundations"
+  },
+  {
+    "id": "cardinality",
+    "title": "Cardinality of a set",
+    "notation": "|S|",
+    "parts": [
+      [
+        "|S|",
+        "The number of elements in the set S."
+      ]
+    ],
+    "example": "If S = {2, 4, 6}, then |S| = 3.",
+    "note": "Bars mean cardinality for a set, but absolute value for a number.",
+    "wrong": [
+      "The largest number in S.",
+      "The sum of all elements in S.",
+      "The absolute value of every element in S."
+    ],
+    "aliases": [
+      "|S|",
+      "cardinality",
+      "set size"
+    ],
+    "legacyId": 14,
+    "uni": "foundations",
+    "meaning": "vertical-bars"
+  },
+  {
+    "id": "set-builder",
+    "title": "Set builder notation",
+    "notation": "{x ∈ ℤ : x > 0}",
+    "parts": [
+      [
+        "{x ∈ ℤ",
+        "The set of integers x"
+      ],
+      [
+        ":",
+        "such that"
+      ],
+      [
+        "x > 0}",
+        "x is greater than zero."
+      ]
+    ],
+    "example": "This gives {1, 2, 3, …}.",
+    "note": "ℤ includes negative integers, zero and positive integers. The condition filters them.",
+    "wrong": [
+      "All real numbers greater than zero.",
+      "All integers less than zero.",
+      "Only the integer zero."
+    ],
+    "aliases": [
+      "set builder",
+      "such that"
+    ],
+    "legacyId": 15,
+    "uni": "foundations"
+  },
+  {
+    "id": "cartesian-product",
+    "title": "Cartesian product",
+    "notation": "A × B",
+    "parts": [
+      [
+        "A",
+        "Choose an element from A"
+      ],
+      [
+        "×",
+        "and pair it, in order, with"
+      ],
+      [
+        "B",
+        "an element from B, for every possible pairing."
+      ]
+    ],
+    "example": "If A = {1, 2} and B = {a}, A × B = {(1,a), (2,a)}.",
+    "note": "This is a Cartesian product, not numerical multiplication of sets.",
+    "wrong": [
+      "Elements that appear in both sets.",
+      "The union of the two sets.",
+      "Only pairs whose two elements are equal."
+    ],
+    "aliases": [
+      "cartesian product",
+      "ordered pairs"
+    ],
+    "legacyId": 16,
+    "uni": "foundations"
+  },
+  {
+    "id": "power-set",
+    "title": "Power set",
+    "notation": "𝒫(S)",
+    "parts": [
+      [
+        "𝒫(S)",
+        "The set of all subsets of S."
+      ]
+    ],
+    "example": "𝒫({a,b}) = {∅, {a}, {b}, {a,b}}.",
+    "note": "The empty set and S itself are both included.",
+    "wrong": [
+      "The probability that S occurs.",
+      "The set of individual members of S only.",
+      "The largest subset of S only."
+    ],
+    "aliases": [
+      "𝒫",
+      "power set"
+    ],
+    "legacyId": 17,
+    "uni": "foundations"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "id": "open-ball",
+    "title": "Open ball",
+    "notation": "Bᵣ(x)",
+    "parts": [
+      [
+        "Bᵣ(x)",
+        "The points at distance strictly less than r from x."
+      ]
+    ],
+    "example": "On the real line, B₂(3) = (1,5).",
+    "note": "The boundary is excluded from an open ball.",
+    "wrong": [
+      "The points at distance at most r from x.",
+      "The points exactly r from x."
+    ],
+    "aliases": [
+      "ball",
+      "open ball",
+      "metric"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "closure",
+    "title": "Closure of a set",
+    "notation": "cl(A)",
+    "parts": [
+      [
+        "cl(A)",
+        "The smallest closed set containing A."
+      ]
+    ],
+    "example": "In ℝ, cl((0,1)) = [0,1].",
+    "note": "A closure includes A as well as all of its limit points.",
+    "wrong": [
+      "The largest open subset of A.",
+      "All points outside A."
+    ],
+    "aliases": [
+      "closure",
+      "cl",
+      "closed"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "interior",
+    "title": "Interior of a set",
+    "notation": "int(A)",
+    "parts": [
+      [
+        "int(A)",
+        "The largest open set contained in A."
+      ]
+    ],
+    "example": "In ℝ, int([0,1]) = (0,1).",
+    "note": "Whether a point is interior depends on the ambient space.",
+    "wrong": [
+      "The smallest closed set containing A.",
+      "The set of all boundary points of A."
+    ],
+    "aliases": [
+      "interior",
+      "int",
+      "open"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "boundary",
+    "title": "Boundary of a set",
+    "notation": "∂A",
+    "parts": [
+      [
+        "∂A",
+        "The points whose every neighbourhood meets both A and its complement."
+      ]
+    ],
+    "example": "In ℝ, ∂(0,1) = {0,1}.",
+    "note": "This ∂ marks a boundary. In calculus, ∂ also marks partial derivatives.",
+    "wrong": [
+      "Every point in the interior of A.",
+      "The partial derivative of A."
+    ],
+    "aliases": [
+      "boundary",
+      "∂"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "topological-space",
+    "title": "Topological space",
+    "notation": "(X, τ)",
+    "parts": [
+      [
+        "(X, τ)",
+        "The set X together with the topology τ specifying its open sets."
+      ]
+    ],
+    "example": "For X = {a,b}, τ = {∅,{a},X} is one possible topology.",
+    "note": "The same underlying set can carry more than one topology.",
+    "wrong": [
+      "The point X is at distance τ from the origin.",
+      "τ is a single open set inside X."
+    ],
+    "aliases": [
+      "topology",
+      "tau",
+      "topological space"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "preimage",
+    "title": "Preimage of a set",
+    "notation": "f⁻¹(U)",
+    "parts": [
+      [
+        "f⁻¹(U)",
+        "All inputs whose images under f lie in U."
+      ]
+    ],
+    "example": "For f(x) = x², f⁻¹({4}) = {−2,2}.",
+    "note": "A preimage is defined even when f has no inverse function.",
+    "wrong": [
+      "The reciprocal of each value in U.",
+      "All outputs obtained by feeding U into f."
+    ],
+    "aliases": [
+      "preimage",
+      "inverse image"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "homeomorphism",
+    "title": "Homeomorphic spaces",
+    "notation": "X ≅ Y",
+    "parts": [
+      [
+        "X ≅ Y",
+        "In this topology context, X and Y are related by a continuous bijection with continuous inverse."
+      ]
+    ],
+    "example": "The intervals (0,1) and ℝ are homeomorphic via x ↦ log(x/(1−x)).",
+    "note": "The symbol depends on context. Homeomorphic spaces need not have equal distances.",
+    "wrong": [
+      "X and Y have identical points and distances.",
+      "There is only a continuous map from X to Y."
+    ],
+    "aliases": [
+      "homeomorphic",
+      "homeomorphism",
+      "isomorphism"
+    ],
+    "uni": "topology"
+  },
+  {
+    "id": "tangent-space",
+    "title": "Tangent space",
+    "notation": "TₚM",
+    "parts": [
+      [
+        "TₚM",
+        "The vector space of tangent vectors to manifold M at point p."
+      ]
+    ],
+    "example": "At the point (1,0) of the unit circle, tangent vectors are of the form (0,t).",
+    "note": "The space is attached to a particular point p.",
+    "wrong": [
+      "All points on M except p.",
+      "The vector space of positions of all points on M."
+    ],
+    "aliases": [
+      "tangent space",
+      "manifold",
+      "differential geometry"
+    ],
+    "uni": "topology"
+  }
+]

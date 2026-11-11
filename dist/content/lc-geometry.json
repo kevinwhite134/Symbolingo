@@ -1,0 +1,489 @@
+[
+  {
+    "id": "triangle-congruence",
+    "title": "Congruent triangles",
+    "notation": "△ABC ≅ △DEF",
+    "parts": [
+      [
+        "△ABC ≅ △DEF",
+        "The triangles have the same shape and size, with A matching D, B matching E, and C matching F."
+      ]
+    ],
+    "example": "Congruence gives AB=DE and angle B equal to angle E.",
+    "note": "Letter order identifies the corresponding vertices.",
+    "wrong": [
+      "The triangles have the same shape but may have different sizes."
+    ],
+    "aliases": [
+      "congruent",
+      "congruence",
+      "triangle"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "parallel-lines",
+    "title": "Parallel lines",
+    "notation": "AB ∥ CD",
+    "parts": [
+      [
+        "AB ∥ CD",
+        "The line through A and B is parallel to the line through C and D."
+      ]
+    ],
+    "example": "The lines y=2x and y=2x+3 are distinct and parallel.",
+    "note": "Parallel lines have the same direction. Perpendicular lines meet at a right angle.",
+    "wrong": [
+      "The lines meet at a right angle."
+    ],
+    "aliases": [
+      "parallel",
+      "parallel lines"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "angle-three-points",
+    "title": "Angle named by three points",
+    "notation": "∠ABC",
+    "parts": [
+      [
+        "∠ABC",
+        "The angle with vertex B and arms through A and C."
+      ]
+    ],
+    "example": "If A is east of B and C is north of B, the smaller ∠ABC is 90°.",
+    "note": "The middle letter identifies the vertex.",
+    "wrong": [
+      "The angle with vertex A."
+    ],
+    "aliases": [
+      "angle",
+      "angle abc"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "coordinate-slope",
+    "title": "Slope between two points",
+    "notation": "m = (y₂ − y₁)/(x₂ − x₁)",
+    "parts": [
+      [
+        "m = (y₂ − y₁)/(x₂ − x₁)",
+        "Slope is change in y divided by change in x."
+      ]
+    ],
+    "example": "From (1,2) to (3,8), m=(8−2)/(3−1)=3.",
+    "note": "A vertical line has undefined slope because its change in x is zero.",
+    "wrong": [
+      "Change in x divided by change in y."
+    ],
+    "aliases": [
+      "slope",
+      "gradient",
+      "rise over run"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "line-point-slope",
+    "title": "Point–slope equation",
+    "notation": "y − y₁ = m(x − x₁)",
+    "parts": [
+      [
+        "y − y₁ = m(x − x₁)",
+        "The line with slope m through (x₁,y₁)."
+      ]
+    ],
+    "example": "A line with slope 2 through (1,3) is y−3=2(x−1).",
+    "note": "The fixed point (x₁,y₁) is on the line, and (x,y) is a variable point.",
+    "wrong": [
+      "A line through the origin for every x₁ and y₁."
+    ],
+    "aliases": [
+      "line equation",
+      "point slope"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "circle-equation",
+    "title": "Centre and radius of a circle",
+    "notation": "(x − h)² + (y − k)² = r²",
+    "parts": [
+      [
+        "(x − h)² + (y − k)²",
+        "The squared distance from centre (h,k)"
+      ],
+      [
+        "= r²",
+        "equals the square of the radius."
+      ]
+    ],
+    "example": "(x−2)²+(y+3)²=16 has centre (2,−3) and radius 4.",
+    "note": "Inside a bracket, y+3 means y−(−3). The radius is √16, not 16.",
+    "wrong": [
+      "A circle with centre (−h,−k) and radius r²."
+    ],
+    "aliases": [
+      "circle",
+      "radius",
+      "centre"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "point-to-line-distance",
+    "title": "Perpendicular distance to a line",
+    "notation": "d = |ax₀ + by₀ + c|/√(a² + b²)",
+    "parts": [
+      [
+        "d = |ax₀ + by₀ + c|/√(a² + b²)",
+        "The shortest distance from (x₀,y₀) to ax+by+c=0."
+      ]
+    ],
+    "example": "For (3,2) and the line x−1=0, d=|3−1|/1=2.",
+    "note": "The bars remove the sign, because distance is non-negative.",
+    "wrong": [
+      "The distance from (x₀,y₀) to the origin."
+    ],
+    "aliases": [
+      "perpendicular distance",
+      "point to line"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "pythagoras",
+    "title": "Pythagoras’ theorem",
+    "notation": "a² + b² = c²",
+    "parts": [
+      [
+        "a² + b² = c²",
+        "In a right triangle the squared legs add to the squared hypotenuse."
+      ]
+    ],
+    "example": "Legs 3 and 4 give c=√(9+16)=5.",
+    "note": "c labels the side opposite the right angle.",
+    "wrong": [
+      "The leg lengths themselves add to the hypotenuse."
+    ],
+    "aliases": [
+      "pythagoras",
+      "hypotenuse",
+      "right triangle"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "right-triangle-sine",
+    "title": "Sine in a right triangle",
+    "notation": "sin θ = opposite/hypotenuse",
+    "parts": [
+      [
+        "sin θ = opposite/hypotenuse",
+        "Divide the side opposite θ by the hypotenuse."
+      ]
+    ],
+    "example": "An opposite side 3 and hypotenuse 5 give sin θ=3/5.",
+    "note": "Which side is opposite depends on the angle chosen.",
+    "wrong": [
+      "Divide the adjacent side by the hypotenuse."
+    ],
+    "aliases": [
+      "sine",
+      "sin",
+      "sohcahtoa"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "right-triangle-cosine",
+    "title": "Cosine in a right triangle",
+    "notation": "cos θ = adjacent/hypotenuse",
+    "parts": [
+      [
+        "cos θ = adjacent/hypotenuse",
+        "Divide the leg next to θ by the hypotenuse."
+      ]
+    ],
+    "example": "An adjacent side 4 and hypotenuse 5 give cos θ=4/5.",
+    "note": "The adjacent leg is the side next to θ that is not the hypotenuse.",
+    "wrong": [
+      "Divide the opposite side by the hypotenuse."
+    ],
+    "aliases": [
+      "cosine",
+      "cos",
+      "sohcahtoa"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "right-triangle-tangent",
+    "title": "Tangent in a right triangle",
+    "notation": "tan θ = opposite/adjacent",
+    "parts": [
+      [
+        "tan θ = opposite/adjacent",
+        "Divide the opposite leg by the adjacent leg."
+      ]
+    ],
+    "example": "An opposite leg 3 and adjacent leg 4 give tan θ=3/4.",
+    "note": "Both numerator and denominator are legs.",
+    "wrong": [
+      "Divide the opposite leg by the hypotenuse."
+    ],
+    "aliases": [
+      "tan",
+      "tangent ratio",
+      "sohcahtoa"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "sine-rule",
+    "title": "Sine rule",
+    "notation": "a/sin A = b/sin B = c/sin C",
+    "parts": [
+      [
+        "a/sin A = b/sin B = c/sin C",
+        "Each side divided by the sine of its opposite angle has the same value."
+      ]
+    ],
+    "example": "If A=30°, a=4 and B=90°, then b=4×sin 90°/sin 30°=8.",
+    "note": "Match a lowercase side to its opposite uppercase angle.",
+    "wrong": [
+      "Each side is divided by the sine of its adjacent angle."
+    ],
+    "aliases": [
+      "sine rule",
+      "law of sines"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "cosine-rule",
+    "title": "Cosine rule",
+    "notation": "c² = a² + b² − 2ab cos C",
+    "parts": [
+      [
+        "c² = a² + b² − 2ab cos C",
+        "Square the side opposite C using the adjacent sides and their included angle."
+      ]
+    ],
+    "example": "If a=3, b=4 and C=90°, the cosine term is zero and c=5.",
+    "note": "C must be the angle between sides a and b.",
+    "wrong": [
+      "Add 2ab cos C to a²+b²."
+    ],
+    "aliases": [
+      "cosine rule",
+      "law of cosines"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "sector-area",
+    "title": "Area of a circular sector",
+    "notation": "A = (θ/360°)πr²",
+    "parts": [
+      [
+        "A = (θ/360°)πr²",
+        "The sector area is the fraction of a full turn times the area of the disc."
+      ]
+    ],
+    "example": "A 90° sector of radius 4 has area ¼×16π=4π.",
+    "note": "The denominator 360° applies when θ is measured in degrees.",
+    "wrong": [
+      "Multiply the fraction of the turn by the circumference."
+    ],
+    "aliases": [
+      "sector area",
+      "circle sector"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "radian-measure",
+    "title": "Angle in radians",
+    "notation": "θ = s/r",
+    "parts": [
+      [
+        "θ = s/r",
+        "The angle in radians is arc length divided by radius."
+      ]
+    ],
+    "example": "A semicircle has arc πr, so the angle is π radians.",
+    "note": "The ratio s/r gives radians. A semicircle is also 180 degrees.",
+    "wrong": [
+      "Divide radius by arc length to get degrees."
+    ],
+    "aliases": [
+      "radian",
+      "radians",
+      "arc length"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "trig-identity",
+    "title": "Pythagorean trigonometric identity",
+    "notation": "sin² θ + cos² θ = 1",
+    "parts": [
+      [
+        "sin² θ + cos² θ = 1",
+        "The squares of sine and cosine at the same angle sum to one."
+      ]
+    ],
+    "example": "At 30°, the two squared terms are ¼ and ¾.",
+    "note": "sin² θ means (sin θ)², rather than sin(θ²).",
+    "wrong": [
+      "Take the sine and cosine of θ² and add them."
+    ],
+    "aliases": [
+      "trig identity",
+      "sin squared",
+      "cos squared"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "enlargement",
+    "title": "Enlargement scale factor",
+    "notation": "A′ = k²A",
+    "parts": [
+      [
+        "A′ = k²A",
+        "Enlarging lengths by factor k multiplies area by k squared."
+      ]
+    ],
+    "example": "A triangle of area 5 enlarged by factor 3 has area 45.",
+    "note": "Area scales by k² even though length scales by k.",
+    "wrong": [
+      "Multiply the area by k only."
+    ],
+    "aliases": [
+      "enlargement",
+      "scale factor",
+      "similarity"
+    ],
+    "lc": {
+      "topic": "lc-geometry",
+      "section": "2.4",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  }
+]

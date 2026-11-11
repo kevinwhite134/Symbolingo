@@ -1,0 +1,192 @@
+[
+  {
+    "id": "matrix-entry",
+    "title": "Matrix entry",
+    "notation": "aᵢⱼ",
+    "parts": [
+      [
+        "aᵢⱼ",
+        "The entry of A in row i and column j."
+      ]
+    ],
+    "example": "For A with rows (2,5) and (7,9), a₁₂ = 5.",
+    "note": "Read row first, column second.",
+    "wrong": [
+      "The entry in row j and column i.",
+      "The product of entries i and j."
+    ],
+    "aliases": [
+      "matrix entry",
+      "a_ij",
+      "rows columns"
+    ],
+    "uni": "linear-algebra"
+  },
+  {
+    "id": "matrix-transpose",
+    "title": "Matrix transpose",
+    "notation": "Aᵀ",
+    "parts": [
+      [
+        "Aᵀ",
+        "The matrix formed by swapping the rows and columns of A."
+      ]
+    ],
+    "example": "A single row [1, 2] becomes the column with entries 1 and 2.",
+    "note": "Aᵀ rearranges entries. A⁻¹ reverses a linear map when the inverse exists.",
+    "wrong": [
+      "The inverse of A.",
+      "The matrix obtained by negating every entry of A."
+    ],
+    "aliases": [
+      "transpose",
+      "A^T"
+    ],
+    "uni": "linear-algebra"
+  },
+  {
+    "id": "matrix-determinant",
+    "title": "Determinant of a matrix",
+    "notation": "det(A) = |A|",
+    "parts": [
+      [
+        "det(A) = |A|",
+        "The determinant of the square matrix A."
+      ]
+    ],
+    "example": "For the diagonal matrix with entries 2 and 3, det(A) = 2 × 3 = 6.",
+    "note": "A determinant can be negative. These bars do not ask for an absolute value.",
+    "wrong": [
+      "The number of rows of A.",
+      "The sum of the diagonal entries of A."
+    ],
+    "aliases": [
+      "det",
+      "determinant",
+      "|A|"
+    ],
+    "uni": "linear-algebra",
+    "meaning": "vertical-bars"
+  },
+  {
+    "id": "matrix-rank",
+    "title": "Matrix rank",
+    "notation": "rank(A)",
+    "parts": [
+      [
+        "rank(A)",
+        "The dimension of the column space of A."
+      ]
+    ],
+    "example": "The columns (1,2) and (2,4) span a line, so rank(A) = 1.",
+    "note": "Counting columns gives the rank only when the columns are independent.",
+    "wrong": [
+      "The number of columns, whether independent or not.",
+      "The largest entry in A."
+    ],
+    "aliases": [
+      "rank",
+      "column space"
+    ],
+    "uni": "linear-algebra"
+  },
+  {
+    "id": "null-space",
+    "title": "Kernel or null space",
+    "notation": "ker(A)",
+    "parts": [
+      [
+        "ker(A)",
+        "The set of vectors v for which Av is the zero vector."
+      ]
+    ],
+    "example": "For A = [1 0], every vector of the form (0,t) is in the kernel.",
+    "note": "The kernel describes inputs that map to zero, rather than outputs produced by A.",
+    "wrong": [
+      "The set of all vectors produced as Av.",
+      "The set of columns of A."
+    ],
+    "aliases": [
+      "kernel",
+      "null space",
+      "nullspace",
+      "ker"
+    ],
+    "uni": "linear-algebra"
+  },
+  {
+    "id": "inner-product",
+    "title": "Inner product",
+    "notation": "⟨u,v⟩",
+    "parts": [
+      [
+        "⟨u,v⟩",
+        "The inner product of vectors u and v, a scalar."
+      ]
+    ],
+    "example": "In the usual real plane, ⟨(1,2),(3,4)⟩ = 1×3 + 2×4 = 11.",
+    "note": "The angle brackets denote the product, rather than the angle between the vectors.",
+    "wrong": [
+      "The vector from u to v.",
+      "The angle between u and v in degrees."
+    ],
+    "aliases": [
+      "inner product",
+      "dot product",
+      "angle brackets"
+    ],
+    "uni": "linear-algebra"
+  },
+  {
+    "id": "vector-norm",
+    "title": "Euclidean norm",
+    "notation": "‖v‖₂",
+    "parts": [
+      [
+        "‖v‖₂",
+        "The Euclidean length of vector v."
+      ]
+    ],
+    "example": "For v = (3,4), ‖v‖₂ = √(9 + 16) = 5.",
+    "note": "The subscript 2 names the norm. It does not square the length.",
+    "wrong": [
+      "The square of the Euclidean length of v.",
+      "The second coordinate of v."
+    ],
+    "aliases": [
+      "norm",
+      "euclidean norm",
+      "L2 norm",
+      "||v||"
+    ],
+    "uni": "linear-algebra"
+  },
+  {
+    "id": "eigenvalue",
+    "title": "Eigenvector and eigenvalue",
+    "notation": "Av = λv",
+    "parts": [
+      [
+        "Av",
+        "Applying A to nonzero v gives"
+      ],
+      [
+        "= λv",
+        "the same vector scaled by λ."
+      ]
+    ],
+    "example": "For A = diag(2,3) and v = (1,0), Av = 2v, so λ = 2.",
+    "note": "The zero vector is excluded even though A0 = λ0 for every λ.",
+    "wrong": [
+      "A changes the direction of v by the angle λ.",
+      "λ is the number of coordinates of v."
+    ],
+    "aliases": [
+      "eigenvalue",
+      "eigenvector",
+      "lambda",
+      "Av=λv"
+    ],
+    "uni": "linear-algebra"
+  }
+]

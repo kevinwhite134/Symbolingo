@@ -1,0 +1,326 @@
+[
+  {
+    "id": "distributive-law",
+    "title": "Distributive law",
+    "notation": "a(b + c) = ab + ac",
+    "parts": [
+      [
+        "a(b + c)",
+        "Multiply a by the sum inside the brackets"
+      ],
+      [
+        "= ab + ac",
+        "which equals a times each term, added together."
+      ]
+    ],
+    "example": "2(x+3)=2x+6.",
+    "note": "Multiply every term inside the brackets.",
+    "wrong": [
+      "a(b+c) equals ab+c."
+    ],
+    "aliases": [
+      "distributive law",
+      "expand",
+      "brackets"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "factorisation",
+    "title": "Factorisation",
+    "notation": "x² − 9 = (x−3)(x+3)",
+    "parts": [
+      [
+        "x² − 9 = (x−3)(x+3)",
+        "The difference of squares is written as a product of two factors."
+      ]
+    ],
+    "example": "At x=5, both sides give 16.",
+    "note": "Adding the factors does not reconstruct the expression. Multiply them.",
+    "wrong": [
+      "The expression is the square of x−3."
+    ],
+    "aliases": [
+      "factorisation",
+      "factorise",
+      "difference of squares"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "rational-expression",
+    "title": "Rational algebraic expression",
+    "notation": "(x²−1)/(x−1) = x+1",
+    "parts": [
+      [
+        "(x²−1)/(x−1) = x+1",
+        "Cancelling the factor x−1 simplifies the fraction when x is not 1."
+      ]
+    ],
+    "example": "For x=3 the fraction is 8/2=4. At x=1 the original fraction is undefined.",
+    "note": "Cancel common factors and preserve the original domain restriction.",
+    "wrong": [
+      "Both expressions are defined and equal at x=1."
+    ],
+    "aliases": [
+      "rational expression",
+      "cancel",
+      "simplify"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "binomial-theorem",
+    "title": "Binomial theorem",
+    "notation": "(a+b)³ = a³ + 3a²b + 3ab² + b³",
+    "parts": [
+      [
+        "(a+b)³ = a³ + 3a²b + 3ab² + b³",
+        "Expanding the cube gives terms whose coefficients are 1, 3, 3 and 1."
+      ]
+    ],
+    "example": "With a=2 and b=1, the expansion is 8+12+6+1=27.",
+    "note": "The mixed terms come from choosing a or b from each factor.",
+    "wrong": [
+      "Cube each term separately and add only a³ and b³."
+    ],
+    "aliases": [
+      "binomial theorem",
+      "binomial expansion",
+      "pascal triangle"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "quadratic-formula",
+    "title": "Quadratic formula",
+    "notation": "x = (−b ± √(b²−4ac))/(2a)",
+    "parts": [
+      [
+        "x = (−b ± √(b²−4ac))/(2a)",
+        "For ax²+bx+c=0 with a nonzero, use each sign to find the possible roots."
+      ]
+    ],
+    "example": "For x²−5x+6=0, the formula gives (5±1)/2, so x=2 or x=3.",
+    "note": "Divide the entire numerator by 2a. If the square root is zero, the two signs give the same root.",
+    "wrong": [
+      "Divide only the square root by 2a and then subtract b."
+    ],
+    "aliases": [
+      "quadratic formula",
+      "discriminant",
+      "plus or minus",
+      "±"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "simultaneous-equations",
+    "title": "Simultaneous equations",
+    "notation": "x+y=7, x−y=1",
+    "parts": [
+      [
+        "x+y=7, x−y=1",
+        "Find one pair of values that makes both equations true."
+      ]
+    ],
+    "example": "Adding the equations gives 2x=8, so x=4 and y=3.",
+    "note": "A solution of just one of the equations does not solve the system.",
+    "wrong": [
+      "Find any pair that satisfies either equation."
+    ],
+    "aliases": [
+      "simultaneous equations",
+      "system of equations"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "linear-inequality",
+    "title": "Inclusive inequality",
+    "notation": "x ≤ 3",
+    "parts": [
+      [
+        "x ≤ 3",
+        "x is less than or equal to three."
+      ]
+    ],
+    "example": "The values 2.9 and 3 satisfy this inequality, but 3.1 does not.",
+    "note": "The line under the angle includes equality.",
+    "wrong": [
+      "x is strictly less than three."
+    ],
+    "aliases": [
+      "inequality",
+      "less than or equal",
+      "<="
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "inequality-negative",
+    "title": "Inequality under negative division",
+    "notation": "−2x < 6 ⇒ x > −3",
+    "parts": [
+      [
+        "−2x < 6",
+        "Negative two times x is less than six,"
+      ],
+      [
+        "so x > −3",
+        "so x is greater than negative three."
+      ]
+    ],
+    "example": "x=0 satisfies both statements, while x=−4 satisfies neither.",
+    "note": "Multiplying or dividing an inequality by a negative number reverses its direction.",
+    "wrong": [
+      "Dividing by −2 gives x<−3."
+    ],
+    "aliases": [
+      "inequality",
+      "reverse sign"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "modulus-inequality",
+    "title": "Absolute value inequality",
+    "notation": "|x−a| < b",
+    "parts": [
+      [
+        "|x−a| < b",
+        "x lies less than b units from a."
+      ]
+    ],
+    "example": "|x−3|<2 is true for 1<x<5.",
+    "note": "Both endpoints are excluded because the inequality is strict.",
+    "wrong": [
+      "All x to the left of a−b or right of a+b."
+    ],
+    "aliases": [
+      "modulus inequality",
+      "absolute value inequality"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "polar-complex",
+    "title": "Polar form of a complex number",
+    "notation": "z = r(cos θ + i sin θ)",
+    "parts": [
+      [
+        "z = r(cos θ + i sin θ)",
+        "Write z using distance r from the origin and angle θ from the positive real axis."
+      ]
+    ],
+    "example": "If r=2 and θ=90°, z=2i.",
+    "note": "r is the modulus of z. It is not the real part.",
+    "wrong": [
+      "r is the real part and θ is the imaginary part."
+    ],
+    "aliases": [
+      "polar form",
+      "argand",
+      "complex numbers"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.4",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "de-moivre",
+    "title": "De Moivre’s theorem",
+    "notation": "(cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ)",
+    "parts": [
+      [
+        "(cos θ + i sin θ)ⁿ",
+        "Raising a unit complex number to an integer power n"
+      ],
+      [
+        "= cos(nθ) + i sin(nθ)",
+        "multiplies its angle by n."
+      ]
+    ],
+    "example": "For θ=π/2 and n=2, the left side is i² and the right side is cos π+i sin π=−1.",
+    "note": "Multiply the angle inside both trig functions.",
+    "wrong": [
+      "Raise cos θ and i sin θ to power n separately and add them."
+    ],
+    "aliases": [
+      "de moivre",
+      "complex powers"
+    ],
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.4",
+      "levels": [
+        "higher"
+      ]
+    }
+  }
+]

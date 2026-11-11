@@ -1,0 +1,445 @@
+[
+  {
+    "id": "function-mapping",
+    "title": "Function mapping",
+    "notation": "f : A → B",
+    "parts": [
+      [
+        "f",
+        "f is a function"
+      ],
+      [
+        ": A",
+        "whose inputs come from A"
+      ],
+      [
+        "→ B",
+        "and whose outputs belong to B."
+      ]
+    ],
+    "example": "f : ℤ → ℤ, f(x) = x + 1 maps each integer to another integer.",
+    "note": "B is the codomain. The actual outputs (image) need not fill all of B.",
+    "wrong": [
+      "Every element of B must be an output.",
+      "f is a set containing A and B.",
+      "f always maps B into A."
+    ],
+    "aliases": [
+      "mapping",
+      "domain",
+      "codomain"
+    ],
+    "legacyId": 18,
+    "uni": "calculus"
+  },
+  {
+    "id": "composition",
+    "title": "Function composition",
+    "notation": "(g ∘ f)(x)",
+    "parts": [
+      [
+        "(g ∘ f)",
+        "Apply f, then apply g to its result,"
+      ],
+      [
+        "(x)",
+        "starting with the input x."
+      ]
+    ],
+    "example": "If f(x) = x + 1 and g(x) = 2x, then (g ∘ f)(3) = 8.",
+    "note": "Read composition from right to left: g(f(x)).",
+    "wrong": [
+      "Apply g first and then f.",
+      "Multiply g(x) by f(x).",
+      "Add g(x) to f(x)."
+    ],
+    "aliases": [
+      "∘",
+      "composition",
+      "g(f(x))",
+      "fog"
+    ],
+    "legacyId": 19,
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "common-logarithm",
+    "title": "Base ten logarithm",
+    "notation": "log₁₀(100) = 2",
+    "parts": [
+      [
+        "log₁₀",
+        "The power that 10 must be raised to"
+      ],
+      [
+        "(100)",
+        "to get 100"
+      ],
+      [
+        "= 2",
+        "is 2."
+      ]
+    ],
+    "example": "10² = 100, so log₁₀(100) = 2. Also log₁₀(0.1) = −1 because 10⁻¹ = 0.1.",
+    "note": "A logarithm finds the exponent. It does not ask what number to raise to 100.",
+    "wrong": [
+      "100 raised to 10 equals 2.",
+      "10 multiplied by 100 equals 2.",
+      "The square root of 100 is 2."
+    ],
+    "aliases": [
+      "log10",
+      "log_10",
+      "logarithm",
+      "common log"
+    ],
+    "legacyId": 22,
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "binary-logarithm",
+    "title": "Base two logarithm",
+    "notation": "log₂(n)",
+    "parts": [
+      [
+        "log₂",
+        "The power that 2 must be raised to"
+      ],
+      [
+        "(n)",
+        "to get n."
+      ]
+    ],
+    "example": "log₂(8) = 3 because 2³ = 8.",
+    "note": "This appears in binary search: repeated halving leads to logarithmic growth.",
+    "wrong": [
+      "Two raised to the power n.",
+      "n divided by 2.",
+      "The square root of n."
+    ],
+    "aliases": [
+      "log2",
+      "log_2",
+      "binary log"
+    ],
+    "legacyId": 23,
+    "uni": "calculus"
+  },
+  {
+    "id": "summation",
+    "title": "Summation",
+    "notation": "∑ᵢ₌₁⁴ i",
+    "parts": [
+      [
+        "∑",
+        "Add together"
+      ],
+      [
+        "ᵢ₌₁",
+        "starting with i = 1"
+      ],
+      [
+        "⁴",
+        "and ending at i = 4"
+      ],
+      [
+        " i",
+        "the value of i each time."
+      ]
+    ],
+    "example": "1 + 2 + 3 + 4 = 10.",
+    "note": "The lower limit starts the counter. The upper limit is included.",
+    "wrong": [
+      "Multiply 1, 2, 3 and 4 together.",
+      "Add only 1 and 4.",
+      "Add i four times, without changing i."
+    ],
+    "aliases": [
+      "∑",
+      "Σ",
+      "sigma",
+      "sum",
+      "summation"
+    ],
+    "legacyId": 28,
+    "uni": "calculus"
+  },
+  {
+    "id": "limit",
+    "title": "Limit of a function",
+    "notation": "limₓ→₀ f(x) = L",
+    "parts": [
+      [
+        "limₓ→₀",
+        "As x gets arbitrarily close to zero"
+      ],
+      [
+        "f(x)",
+        "the value of f(x) approaches"
+      ],
+      [
+        "= L",
+        "L."
+      ]
+    ],
+    "example": "For f(x) = x + 2, the limit as x approaches 0 is 2.",
+    "note": "A limit concerns nearby inputs. f(0) need not even be defined.",
+    "wrong": [
+      "f(0) must equal L and be defined.",
+      "x gets arbitrarily large.",
+      "f(x) is always exactly L."
+    ],
+    "aliases": [
+      "lim",
+      "limit",
+      "tends to"
+    ],
+    "legacyId": 46,
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "derivative",
+    "title": "Derivative",
+    "notation": "d/dx (x²) = 2x",
+    "parts": [
+      [
+        "d/dx",
+        "The rate of change with respect to x"
+      ],
+      [
+        "(x²)",
+        "of x squared"
+      ],
+      [
+        "= 2x",
+        "is 2x."
+      ]
+    ],
+    "example": "At x = 3, the slope of y = x² is 6.",
+    "note": "A derivative describes local slope, not the average change over a whole interval.",
+    "wrong": [
+      "The area under x squared is 2x.",
+      "Divide x squared by x to get 2x.",
+      "The second derivative of x is 2x."
+    ],
+    "aliases": [
+      "dy/dx",
+      "d/dx",
+      "derivative",
+      "rate of change"
+    ],
+    "legacyId": 47,
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "definite-integral",
+    "title": "Definite integral",
+    "notation": "∫ₐᵇ f(x) dx",
+    "parts": [
+      [
+        "∫ₐᵇ",
+        "Integrate from a to b"
+      ],
+      [
+        "f(x) dx",
+        "the function f with respect to x."
+      ]
+    ],
+    "example": "∫₀¹ 2x dx = [x²]₀¹ = 1.",
+    "note": "A definite integral gives signed accumulation. Areas below the axis contribute negatively.",
+    "wrong": [
+      "Find the average of f(a) and f(b).",
+      "Find the derivative of f at b."
+    ],
+    "aliases": [
+      "integral",
+      "integrate",
+      "area under curve",
+      "int"
+    ],
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "indefinite-integral",
+    "title": "Indefinite integral",
+    "notation": "∫ f(x) dx",
+    "parts": [
+      [
+        "∫ f(x) dx",
+        "The family of antiderivatives of f with respect to x."
+      ]
+    ],
+    "example": "∫ 2x dx = x² + C.",
+    "note": "Include the constant C because constants disappear under differentiation.",
+    "wrong": [
+      "One fixed numerical area under f.",
+      "The derivative of f with respect to x."
+    ],
+    "aliases": [
+      "antiderivative",
+      "indefinite integral",
+      "+ C"
+    ],
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "partial-derivative",
+    "title": "Partial derivative",
+    "notation": "∂f/∂x",
+    "parts": [
+      [
+        "∂f/∂x",
+        "Differentiate f with respect to x while keeping the other independent variables fixed."
+      ]
+    ],
+    "example": "For f(x,y) = x²y, ∂f/∂x = 2xy.",
+    "note": "Holding y fixed does not mean substituting y = 0.",
+    "wrong": [
+      "Differentiate f with respect to all variables at once.",
+      "Set x to zero and evaluate f."
+    ],
+    "aliases": [
+      "partial derivative",
+      "partial",
+      "del",
+      "∂"
+    ],
+    "uni": "calculus"
+  },
+  {
+    "id": "gradient",
+    "title": "Gradient",
+    "notation": "∇f",
+    "parts": [
+      [
+        "∇f",
+        "The vector of first partial derivatives of f."
+      ]
+    ],
+    "example": "For f(x,y) = x² + 3y, ∇f = (2x,3).",
+    "note": "The gradient is a vector for a scalar-valued function. The divergence of a vector field is a scalar.",
+    "wrong": [
+      "The sum of all first partial derivatives of f.",
+      "The matrix of second partial derivatives."
+    ],
+    "aliases": [
+      "grad",
+      "gradient",
+      "nabla",
+      "∇"
+    ],
+    "uni": "calculus"
+  },
+  {
+    "id": "chain-rule",
+    "title": "Chain rule",
+    "notation": "(f ∘ g)′(x) = f′(g(x)) × g′(x)",
+    "parts": [
+      [
+        "(f ∘ g)′(x)",
+        "The derivative of the composite at x"
+      ],
+      [
+        "= f′(g(x))",
+        "is the outer derivative at the inner value"
+      ],
+      [
+        "× g′(x)",
+        "times the inner derivative."
+      ]
+    ],
+    "example": "If f(u) = u² and g(x) = 3x, the result is 2(3x) × 3 = 18x.",
+    "note": "Evaluate the outer derivative at g(x), rather than at x.",
+    "wrong": [
+      "Multiply f′(x) by g′(x) for every pair of functions.",
+      "Add the outer and inner derivatives."
+    ],
+    "aliases": [
+      "chain rule",
+      "composite derivative"
+    ],
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "second-derivative",
+    "title": "Second derivative",
+    "notation": "f″(x)",
+    "parts": [
+      [
+        "f″(x)",
+        "The derivative of the first derivative, evaluated at x."
+      ]
+    ],
+    "example": "If f(x) = x³, then f′(x) = 3x² and f″(x) = 6x.",
+    "note": "The double prime means differentiate twice.",
+    "wrong": [
+      "Square the first derivative.",
+      "Evaluate the first derivative at twice x."
+    ],
+    "aliases": [
+      "f''",
+      "d2y/dx2",
+      "second derivative"
+    ],
+    "uni": "calculus",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  }
+]

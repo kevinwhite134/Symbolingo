@@ -1,66 +1,566 @@
-const cards=[];function add(cat,notation,parts,example,note,wrong){cards.push({id:cards.length,cat,notation,parts,example,note,wrong})}
-add('Logic','∀x ∈ S, P(x)',[['∀x','For every x'],['∈ S', 'in the set S'],[', P(x)','the statement P(x) is true.']],'If S = {2, 4, 6} and P(x) means “x is even”, this is true.','∀ means every, so one counterexample makes the whole statement false.',['At least one x in S makes P(x) true.','No x in S makes P(x) true.','Exactly one x in S makes P(x) true.']);
-add('Logic','∃x ∈ S : P(x)',[['∃x','There is at least one x'],['∈ S','in the set S'],[': P(x)','such that P(x) is true.']],'In {1, 2, 3}, there is an even number: 2.','The colon means “such that” here, not division.',['Every x in S makes P(x) true.','Exactly one x in S must make P(x) true.','P(x) is false for every x in S.']);
-add('Logic','∃!x : P(x)',[['∃!x','There is exactly one x'],[': P(x)','such that P(x) is true.']],'There is exactly one integer x with x + 2 = 5: x = 3.','The exclamation mark adds uniqueness.',['There is at least one x, possibly many, with P(x) true.','Every x makes P(x) true.','There is no x that makes P(x) true.']);
-add('Logic','p ⇒ q',[['p','If p is true'],['⇒','then'],['q','q is true.']],'If it is a square, then it has four sides.','This does not say q implies p. A false premise does not make the implication false.',['If q is true, then p is true.','p and q are both false.','p is true and q is false.']);
-add('Logic','p ⇔ q',[['p','p is true'],['⇔','if and only if'],['q','q is true.']],'An integer is even if and only if it is divisible by 2.','Both directions must hold: p ⇒ q and q ⇒ p.',['Only p implies q; the reverse need not hold.','Exactly one of p and q is true.','p and q must both be true.']);
-add('Logic','p ∧ q',[['p','p is true'],['∧','and'],['q','q is true.']],'“x > 0 AND x < 10” requires both conditions.','AND may also appear as && in code, or a dot in Boolean algebra.',['At least one of p and q is true.','p is false.','Exactly one of p and q is true.']);
-add('Logic','p ∨ q',[['p','p is true'],['∨','or'],['q','q is true (or both are true).']],'x = 2 satisfies “x is even OR x is positive”, since both are true.','Mathematical OR is inclusive unless stated otherwise.',['Exactly one of p and q is true.','Both p and q must be true.','Neither p nor q is true.']);
-add('Logic','¬p',[['¬','It is not the case that'],['p','p is true.']],'If p is “5 is even”, ¬p is true.','Negating “every” gives “there exists a counterexample”.',['p is definitely true.','p implies itself.','p and another statement are true.']);
-add('Logic','p ⊕ q',[['p','p is true'],['⊕','or, exclusively,'],['q','q is true: exactly one is true.']],'True ⊕ True = False; True ⊕ False = True.','XOR differs from OR when both inputs are true.',['At least one is true, including when both are true.','Both are true.','Neither is true.']);
-add('Sets','x ∈ S',[['x','x'],['∈','is an element of'],['S','the set S.']],'3 ∈ {1, 3, 5} means 3 is one of the members.','∈ compares an element with a set; ⊆ compares sets.',['x is a subset of S.','S is an element of x.','x is not in S.']);
-add('Sets','A ⊆ B',[['A','Every element of A'],['⊆','also belongs to'],['B','B.']],' {1, 2} ⊆ {1, 2, 3}. A and B may also be equal.','⊆ allows equality. We use ⊊ for a proper subset.',['A and B have no shared elements.','A must contain B.','A is one individual element of B.']);
-add('Sets','A ∪ B',[['A','The elements in A'],['∪','together with those in'],['B','B, with duplicates removed.']],' {1, 2} ∪ {2, 3} = {1, 2, 3}.','Union is the set version of inclusive OR.',['Only elements in both A and B.','Elements in A but not in B.','Ordered pairs from A and B.']);
-add('Sets','A ∩ B',[['A','The elements in A'],['∩','that are also in'],['B','B.']],' {1, 2} ∩ {2, 3} = {2}.','Intersection is the set version of AND.',['All elements in either A or B.','Elements in A but not B.','The number of elements in B.']);
-add('Sets','A ∖ B',[['A','The elements of A'],['∖','excluding any that are in'],['B','B.']],' {1, 2, 3} ∖ {2, 4} = {1, 3}.','Set difference is directional: A ∖ B can differ from B ∖ A.',['Elements shared by A and B.','Elements of B excluding A.','Every element of either set.']);
-add('Sets','|S|',[['|S|','The number of elements in the set S.']],'If S = {2, 4, 6}, then |S| = 3.','Bars mean cardinality for a set, but absolute value for a number.',['The largest number in S.','The sum of all elements in S.','The absolute value of every element in S.']);
-add('Sets','{x ∈ ℤ : x > 0}',[['{x ∈ ℤ','The set of integers x'],[':','such that'],['x > 0}','x is greater than zero.']],'This gives {1, 2, 3, …}.','ℤ includes negative integers, zero and positive integers. The condition filters them.',['All real numbers greater than zero.','All integers less than zero.','Only the integer zero.']);
-add('Sets','A × B',[['A','Choose an element from A'],['×','and pair it, in order, with'],['B','an element from B, for every possible pairing.']],'If A = {1, 2} and B = {a}, A × B = {(1,a), (2,a)}.','This is a Cartesian product, not numerical multiplication of sets.',['Elements that appear in both sets.','The union of the two sets.','Only pairs whose two elements are equal.']);
-add('Sets','𝒫(S)',[['𝒫(S)','The set of all subsets of S.']],'𝒫({a,b}) = {∅, {a}, {b}, {a,b}}.','The empty set and S itself are both included.',['The probability that S occurs.','The set of individual members of S only.','The largest subset of S only.']);
-add('Functions & relations','f : A → B',[['f','f is a function'],[': A','whose inputs come from A'],['→ B','and whose outputs belong to B.']],'f : ℤ → ℤ, f(x) = x + 1 maps each integer to another integer.','B is the codomain. The actual outputs (image) need not fill all of B.',['Every element of B must be an output.','f is a set containing A and B.','f always maps B into A.']);
-add('Functions & relations','(g ∘ f)(x)',[['(g ∘ f)','Apply f first, then apply g'],['(x)','starting with the input x.']],'If f(x) = x + 1 and g(x) = 2x, then (g ∘ f)(3) = 8.','Read composition from right to left: g(f(x)).',['Apply g first and then f.','Multiply g(x) by f(x).','Add g(x) to f(x).']);
-add('Functions & relations','R ⊆ S × S',[['R','The relation R'],['⊆','is a set of some (possibly all) of the'],['S × S','ordered pairs of elements of S.']],'For S = {1, 2}, “≤” gives R = {(1,1), (1,2), (2,2)}.','A binary relation on S can be represented as pairs or as directed edges.',['R must include every possible ordered pair.','R contains only individual elements of S.','R is a number equal to the size of S squared.']);
-add('Functions & relations','(x,y) ∈ R',[['(x,y)','The ordered pair (x,y)'],['∈ R','belongs to the relation R.']],'If R is “less than”, then (2,5) ∈ R because 2 < 5.','Order matters: (5,2) need not belong to the same relation.',['The pair (y,x) must also belong to R.','x equals y.','Neither x nor y can be related.']);
-add('Numbers & algebra','log₁₀(100) = 2',[['log₁₀','The power that 10 must be raised to'],['(100)','to get 100'],['= 2','is 2.']],'10² = 100, so log₁₀(100) = 2. Also log₁₀(0.1) = −1 because 10⁻¹ = 0.1.','A logarithm finds the exponent. It does not ask what number to raise to 100.',['100 raised to 10 equals 2.','10 multiplied by 100 equals 2.','The square root of 100 is 2.']);
-add('Numbers & algebra','log₂(n)',[['log₂','The power that 2 must be raised to'],['(n)','to get n.']],'log₂(8) = 3 because 2³ = 8.','This appears in binary search: repeated halving leads to logarithmic growth.',['Two raised to the power n.','n divided by 2.','The square root of n.']);
-add('Numbers & algebra','x ∈ ℝ',[['x','x'],['∈','is a member of'],['ℝ','the real numbers.']],'−2, 0, 1/2, √2 and π are real numbers.','ℕ conventions vary on whether 0 is included. ℤ = integers, ℚ = rational numbers.',['x must be a positive integer.','x must be a rational number only.','x is a set of real numbers.']);
-add('Numbers & algebra','|−5| = 5',[['|−5|','The distance of −5 from zero'],['= 5','is 5.']],'Both |−5| and |5| equal 5.','For a number, bars mean absolute value; for a set, bars count its elements.',['Negative five has five set elements.','The square of negative five is five.','Negative five equals positive five.']);
-add('Numbers & algebra','⌊3.7⌋ = 3',[['⌊3.7⌋','Round 3.7 down to the greatest integer no larger than it'],['= 3','to get 3.']],'⌊−2.3⌋ = −3, not −2.','Floor rounds toward negative infinity, not simply toward zero.',['Round 3.7 to the nearest integer, giving 3.','Round 3.7 up, giving 3.','Take the fractional part of 3.7, giving 3.']);
-add('Numbers & algebra','⌈3.2⌉ = 4',[['⌈3.2⌉','Round 3.2 up to the smallest integer no smaller than it'],['= 4','to get 4.']],'⌈−2.3⌉ = −2.','Ceiling is useful for the number of batches when a partial batch still counts.',['Round 3.2 down to get 4.','Multiply 3.2 by itself to get 4.','Take the integer part of 3.2 to get 4.']);
-add('Numbers & algebra','∑ᵢ₌₁⁴ i',[['∑','Add together'],['ᵢ₌₁','starting with i = 1'],['⁴','and ending at i = 4'],[' i','the value of i each time.']],'1 + 2 + 3 + 4 = 10.','The lower limit starts the counter. The upper limit is included.',['Multiply 1, 2, 3 and 4 together.','Add only 1 and 4.','Add i four times, without changing i.']);
-add('Numbers & algebra','n!',[['n!','Multiply all the positive integers from 1 through n.']],'4! = 4 × 3 × 2 × 1 = 24. By definition, 0! = 1.','For non-negative integer n, factorial counts the orderings of n distinct objects.',['Multiply n by itself n times.','Add all integers from 1 through n.','Multiply n by 2.']);
-add('Numbers & algebra','a ≡ b (mod n)',[['a ≡ b','a and b have the same remainder'],['(mod n)','when divided by n.']],'17 ≡ 5 (mod 12), because both leave remainder 5.','Equivalently, n divides a − b. This appears in shift ciphers.',['a and b must be exactly equal.','a divided by b equals n.','n is the remainder of a divided by b.']);
-add('Graphs','G = (V, E)',[['G','The graph G'],['= (V,','consists of a set of vertices V'],['E)','and a set of edges E.']],'V = {a,b,c}, E = {{a,b}, {b,c}} describes an undirected path.','Directed edges are ordered pairs. Undirected edges can be written as two-element sets.',['G is the product of V and E.','V is the edge set and E is the vertex set.','G has exactly two vertices.']);
-add('Graphs','deg(v)',[['deg','The number of incident edges'],['(v)','at vertex v.']],'If a is connected to b, c and d in a simple undirected graph, deg(a) = 3.','In directed graphs distinguish in-degree from out-degree. An undirected loop counts twice.',['The distance from v to every vertex.','The total number of vertices in the graph.','The discovery time of v in DFS.']);
-add('Graphs','dist(s, v)',[['dist','The length of a shortest path'],['(s,','starting at s'],['v)','and ending at v.']],'In an unweighted graph, the path s → a → v has length 2.','BFS finds these distances in unweighted graphs. Unreachable vertices are often assigned ∞.',['The length of the longest path from s to v.','The number of all possible paths from s to v.','The number of neighbours of v.']);
-add('Graphs','ecc(v) = maxᵤ∈ᵥ dist(v,u)',[['ecc(v)','The eccentricity of v'],['= maxᵤ∈ᵥ','is the greatest, over all vertices u in V, of'],['dist(v,u)','the shortest-path distance from v to u.']],'If BFS distances from v are 0, 1, 1, 2, 3, then ecc(v) = 3.','Here the small v in the max label denotes the vertex set V typographically; distance to unreachable vertices may be ∞.',['The smallest distance from v to any vertex.','The sum of the distances from v.','The number of edges touching v.']);
-add('Graphs','d[u] < d[v] < f[v] < f[u]',[['d[u] < d[v]','DFS discovers u before v'],['< f[v]','then finishes v'],['< f[u]','then finishes u.']],'u starts at time 1, v starts at 2, v finishes at 5, u finishes at 8.','These nested intervals mean v is a descendant of u in the DFS forest.',['v finishes after u finishes.','u and v are in disjoint DFS subtrees.','v is discovered before u.']);
-add('Algorithms','T(n) ∈ O(n²)',[['T(n)','The running time T(n)'],['∈ O','has an asymptotic upper bound'],['(n²)','of a constant multiple of n squared.']],'3n² + 10n + 5 is O(n²). A linear function is also O(n²).','Big-O is an upper bound, not necessarily an exact growth rate or a synonym for worst case.',['The running time is exactly n squared for every n.','The running time has a lower bound of n squared.','The running time must grow strictly faster than n squared.']);
-add('Algorithms','T(n) ∈ Θ(n)',[['T(n)','The running time T(n)'],['∈ Θ','is bounded above and below by positive constant multiples'],['(n)','of n, for sufficiently large n.']],'3n + 7 is Θ(n): linear growth.','Theta is a tight asymptotic bound.',['T(n) is exactly n for every n.','T(n) has only an upper bound proportional to n.','T(n) must be quadratic.']);
-add('Algorithms','T(n) ∈ Ω(n)',[['T(n)','The running time T(n)'],['∈ Ω','has an asymptotic lower bound'],['(n)','of a positive constant multiple of n.']],'n² is Ω(n), as is 3n + 1.','Omega describes a lower bound; it does not automatically mean best case.',['T(n) has an upper bound proportional to n.','T(n) is always exactly n.','T(n) grows more slowly than every linear function.']);
-add('Algorithms','f(n) ∈ o(g(n))',[['f(n)','The function f(n)'],['∈ o','grows strictly more slowly, asymptotically, than'],['g(n)','g(n).']],'n ∈ o(n²) because n/n² → 0 as n grows.','Little-o is stricter than Big-O. n is O(n), but not o(n).',['f and g have exactly the same asymptotic order.','f grows strictly faster than g.','f is equal to g for every n.']);
-add('Algorithms','O(|V| + |E|)',[['O','An asymptotic upper bound proportional to'],['(|V|','the number of vertices'],['+ |E|)','plus the number of edges.']],'BFS with adjacency lists runs in O(|V| + |E|).','The vertical bars count elements. This bound depends on the representation and algorithm.',['The number of vertices multiplied by the number of edges.','The number of vertices squared.','The exact time in seconds of BFS.']);
-add('AI search','f(n) = g(n) + h(n)',[['f(n)','The A* evaluation score for node n'],['= g(n)','is the cost already paid to reach n'],['+ h(n)','plus the estimated remaining cost to a goal.']],'If g(n) = 7 and h(n) = 4, then f(n) = 11.','Here n is a search node, not the input size used in Big-O.',['The cost to reach n minus the remaining estimate.','Only the estimated remaining cost.','Only the cost already paid.']);
-add('AI search','h(n) ≤ h*(n)',[['h(n)','The estimated remaining cost from n'],['≤','does not exceed'],['h*(n)','the true cheapest remaining cost.']],'A heuristic of 4 is admissible when the true remaining cost is 6.','h* uses a star to denote the true optimal cost here. This is the admissibility condition.',['The heuristic always overestimates the true remaining cost.','The heuristic must equal the true cost.','The heuristic is the cost already paid.']);
-add('AI search','O(bᵈ)',[['O','An asymptotic upper bound proportional to'],['(b','the branching factor b'],['ᵈ)','raised to the solution depth d.']],'With branching factor 3 and depth 4, bᵈ = 81.','This is a common search-tree bound; exact bounds depend on when goals are tested and nodes are generated.',['The branching factor multiplied by the depth.','The depth raised to the branching factor.','The branching factor plus the depth.']);
-add('Probability & calculus','P(A | B)',[['P','The probability'],['(A','that A happens'],['| B)','given that B has happened.']],'For a fair die: P(even | greater than 3) = 2/3, since {4,5,6} contains two even outcomes.','The vertical bar means “given”, not division or absolute value. Assume P(B) > 0.',['The probability that either A or B happens.','The probability of B given A.','The probability of A multiplied by the probability of B.']);
-add('Probability & calculus','P(A ∩ B)',[['P','The probability'],['(A','that A happens'],['∩ B)','and B happens.']],'On a fair die, “even AND greater than 3” gives {4,6}, so the probability is 2/6.','Do not automatically multiply P(A)P(B); that requires independence.',['The probability that at least one of A or B happens.','The probability of A given B.','The probability that neither event happens.']);
-add('Probability & calculus','limₓ→₀ f(x) = L',[['limₓ→₀','As x gets arbitrarily close to zero'],['f(x)','the value of f(x) approaches'],['= L','L.']],'For f(x) = x + 2, the limit as x approaches 0 is 2.','A limit concerns nearby inputs. f(0) need not even be defined.',['f(0) must equal L and be defined.','x gets arbitrarily large.','f(x) is always exactly L.']);
-add('Probability & calculus','d/dx (x²) = 2x',[['d/dx','The rate of change with respect to x'],['(x²)','of x squared'],['= 2x','is 2x.']],'At x = 3, the slope of y = x² is 6.','A derivative describes local slope, not the average change over a whole interval.',['The area under x squared is 2x.','Divide x squared by x to get 2x.','The second derivative of x is 2x.']);
-add('Formal languages','w ∈ Σ*',[['w','The string w'],['∈','belongs to'],['Σ*','the set of all finite strings over the alphabet Σ, including the empty string.']],'If Σ = {0,1}, then ε, 0, 10 and 110 belong to Σ*.','The star is Kleene star here. It does not mean multiplication or an optimal cost.',['w is exactly one symbol of Σ.','w must be an infinite string.','w must contain every symbol of Σ exactly once.']);
-add('Formal languages','L(M)',[['L(M)','The language consisting of all strings accepted by machine M.']],'If M accepts exactly the binary strings ending in 1, then 01 ∈ L(M).','For a Turing machine, strings outside L(M) may be rejected or may run forever.',['All strings on which M halts, including rejected strings.','The number of states in M.','The set of strings M rejects.']);
-add('Formal languages','δ(q, a) = r',[['δ','The transition function'],['(q, a)','given current state q and input symbol a'],['= r','returns the next state r.']],'In a DFA, reading a in state q moves the machine to state r.','This notation is for a DFA. An NFA transition can return a set of states.',['q is the input symbol and a is the next state.','Every state moves to r without reading input.','The machine accepts all strings ending in r.']);
-// Use an explicitly typeset V in the eccentricity label.
-const ec=cards.find(c=>c.notation.startsWith('ecc'));ec.notation='ecc(v) = max_{u ∈ V} dist(v,u)';ec.parts[1][0]='= max_{u ∈ V}';ec.note='Take shortest-path distances first, then choose the largest. In disconnected graphs, unreachable vertices may have distance ∞.';
-let savedState;try{savedState=JSON.parse(localStorage.getItem('notation-lab')||'{}')}catch{savedState={}}let state={saved:savedState.saved||[],seen:savedState.seen||[],attempts:savedState.attempts||0,correct:savedState.correct||0};let topic='All topics',mode='learn',index=0,selected=-1,revealed=false,answered=null,options=[],session=0,sessionCorrect=0,finished=false,timer=null,auto=false,seconds=6,onlyMissed=false,missed=new Set();
-const $=s=>document.querySelector(s);function persist(){try{localStorage.setItem('notation-lab',JSON.stringify(state))}catch{}$('#learned').textContent=state.seen.length}function pool(){let q=$('#search').value.toLowerCase();return cards.filter(c=>(topic==='All topics'||c.cat===topic)&&(!$('#savedOnly').checked||state.saved.includes(c.id))&&(!onlyMissed||missed.has(c.id))&&(c.notation+' '+c.cat+' '+c.parts.map(p=>p[1]).join(' ')).toLowerCase().includes(q))}function mark(c){if(!state.seen.includes(c.id))state.seen.push(c.id);persist()}function escape(s){return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')}function shuffle(a){return [...a].sort(()=>Math.random()-.5)}function reset(){clearTimeout(timer);index=0;selected=-1;revealed=false;answered=null;finished=false;session=0;sessionCorrect=0;render()}
-function topics(){let cats=['All topics',...new Set(cards.map(c=>c.cat))];$('#topics').innerHTML=cats.map(c=>`<button class="topic ${topic===c?'active':''}" data-topic="${c}"><span>${c}</span><span class="count">${c==='All topics'?cards.length:cards.filter(x=>x.cat===c).length}</span></button>`).join('');document.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>{topic=b.dataset.topic;reset();topics()})}function current(){let a=pool();index=(index+a.length)%a.length;return a[index]}function next(dir=1){clearTimeout(timer);index+=dir;selected=-1;revealed=false;answered=null;render()}
-function render(){clearTimeout(timer);persist();let a=pool();if(!a.length){$('#stage').innerHTML='<div class="card empty"><h2>No matching cards</h2><p>Try another topic, clear your search, or turn off Saved only.</p></div>';$('#position').textContent='0 cards';$('#browse').innerHTML='';return}let c=current();$('#position').textContent=`${index+1} of ${a.length} cards`;$('#browse').innerHTML=mode==='learn'?a.map((x,i)=>`<button class="${index===i?'active':''}" data-card="${i}" aria-label="Explore ${escape(x.notation)}">${escape(x.notation.length>25?x.parts[0][0]:x.notation)}</button>`).join(''):'';document.querySelectorAll('[data-card]').forEach(b=>b.onclick=()=>{index=+b.dataset.card;selected=-1;render()});
-if(finished){$('#stage').innerHTML=`<div class="card summary"><div class="eyebrow">Practice complete</div><h2>One step closer to fluent.</h2><strong>${sessionCorrect} / ${session}</strong><p>You translated ${session} expressions.<br>${missed.size?'Revisit the tricky ones and connect each symbol to its meaning.':'Nice work. Try another topic or a fresh round.'}</p><button class="btn primary" id="again">Another round</button> ${missed.size?'<button class="btn" id="retry">Practise missed cards</button>':''}</div>`;$('#again').onclick=()=>{onlyMissed=false;reset()};if($('#retry'))$('#retry').onclick=()=>{onlyMissed=true;reset()};return}
-let eq=c.parts.map((p,i)=>`<button class="token ${selected===i?'selected':''}" data-part="${i}" aria-label="Explain ${escape(p[0])}">${escape(p[0])}</button>`).join('');let translation=`<div class="translation"><div class="label">IN PLAIN ENGLISH</div><div class="english">${c.parts.map((p,i)=>`<span tabindex="0" role="button" class="chunk ${selected===i?'selected':''}" data-part="${i}">${escape(p[1])}</span>`).join(' ')}</div></div>`;let detail=`<div class="detail"><div><strong>${selected<0?'Try it with real values':escape(c.parts[selected][0])+' means…'}</strong><p>${escape(selected<0?c.example:c.parts[selected][1])}</p></div><div class="callout"><strong>Keep in mind</strong><p>${escape(c.note)}</p></div></div>`;
-const correct=c.parts.map(p=>p[1]).join(' ');let body='';if(mode==='learn'){body=translation+detail;mark(c)}else if(mode==='quiz'){if(answered===null)options=shuffle([c.parts.map(p=>p[1]).join(' '),...c.wrong]);body=`<p class="hint">Which English translation matches this expression?</p><div class="options">${options.map((o,i)=>`<button class="option ${answered!==null?(o===correct?'correct':answered===i?'wrong':''):''}" data-answer="${i}" ${answered!==null?'disabled':''}><b>${'ABCD'[i]}</b>${escape(o)}</button>`).join('')}</div>`+(answered!==null?`<div class="feedback" role="status"><strong>${options[answered]===correct?'Correct. You’ve got it.':'Not quite. The highlighted answer is the correct translation.'}</strong><br>${escape(c.example)}<br><span class="mini">${escape(c.note)}</span></div>`:'')}else{body=revealed?translation+detail:`<div class="flash-cover">Say the meaning out loud, then check yourself.<br><button class="btn primary" id="reveal">Reveal translation <span aria-hidden="true">↵</span></button></div>`}
-$('#stage').innerHTML=`<article class="card"><div class="card-head"><span class="pill">${c.cat}</span><button class="bookmark" id="save" aria-pressed="${state.saved.includes(c.id)}">${state.saved.includes(c.id)?'★ Saved':'☆ Save card'}</button></div><div class="equation">${eq}</div>${mode==='learn'?'<p class="hint">Tap a symbol or phrase to connect the two</p>':''}${body}</article><div class="bottom"><button class="btn" id="prev">← Previous</button>${mode==='flash'?`<div class="settings"><label><input id="auto" type="checkbox" ${auto?'checked':''}>Auto</label><select id="seconds" aria-label="Seconds before reveal"><option value="4" ${seconds===4?'selected':''}>4 sec</option><option value="6" ${seconds===6?'selected':''}>6 sec</option><option value="10" ${seconds===10?'selected':''}>10 sec</option></select></div>`:mode==='quiz'?`<span class="mini">${sessionCorrect}/${session} correct · round of ${Math.min(10,a.length)}</span>`:'<span class="mini">Small steps add up.</span>'}<button class="btn primary" id="next">${mode==='quiz'&&answered!==null&&session>=Math.min(10,a.length)?'See results':mode==='flash'&&revealed?'Next card →':'Next →'}</button></div>${mode==='flash'&&revealed?'<div class="bottom"><button class="btn" id="hard">Practise again</button><button class="btn" id="known">Got it ✓</button></div>':''}<div class="progress"><div style="width:${(index+1)/a.length*100}%"></div></div>`;
-$('#save').onclick=()=>{state.saved=state.saved.includes(c.id)?state.saved.filter(id=>id!==c.id):[...state.saved,c.id];persist();render()};$('#prev').onclick=()=>next(-1);$('#next').onclick=()=>{if(mode==='quiz'&&answered!==null&&session>=Math.min(10,a.length)){finished=true;render()}else next()};document.querySelectorAll('[data-part]').forEach(b=>{const select=()=>{selected=+b.dataset.part;if(mode==='learn'||(mode==='flash'&&revealed))render();else{document.querySelectorAll('.token').forEach(t=>t.classList.toggle('selected',t.dataset.part===b.dataset.part))}};b.onclick=select;b.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();select()}}});document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{answered=+b.dataset.answer;session++;state.attempts++;if(options[answered]===correct){sessionCorrect++;state.correct++;missed.delete(c.id)}else missed.add(c.id);mark(c);render()});if($('#reveal'))$('#reveal').onclick=()=>{revealed=true;mark(c);render()};if($('#auto')){$('#auto').onchange=e=>{auto=e.target.checked;render()};$('#seconds').onchange=e=>{seconds=+e.target.value;render()}}if($('#hard'))$('#hard').onclick=()=>{if(!state.saved.includes(c.id))state.saved.push(c.id);persist();next()};if($('#known'))$('#known').onclick=()=>{mark(c);next()};if(mode==='flash'&&auto)timer=setTimeout(()=>{if(!revealed){revealed=true;mark(c);render()}else next()},(revealed?Math.max(seconds,5):seconds)*1000)
+import {
+  dueCards, loadState, parseRoute, recordQuiz, recordRecall, routeFor,
+  saveState, searchCards, shuffled, visibleIn
+} from './model.js';
+
+const $ = id => document.getElementById(id);
+const trackButtons = document.querySelectorAll('[data-track]');
+const modeButtons = document.querySelectorAll('[data-mode]');
+const stage = $('stage');
+const results = $('results');
+
+let storage;
+try { storage = window.localStorage; } catch { /* Storage can be disabled. */ }
+
+let cards = [];
+let topics = {};
+let state;
+let track = null;
+let level = 'ordinary';
+let topic = 'all';
+let mode = 'learn';
+let pool = [];
+let index = 0;
+let selected = -1;
+let revealed = false;
+let round;
+let retrying = false;
+let auto = false;
+let seconds = 6;
+let timer;
+let catalogue;
+let requestedTrack;
+
+const html = value => String(value).replace(/[&<>"']/g, char => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+})[char]);
+const reading = card => card.parts.map(([, phrase]) => phrase).join(' ');
+const progress = () => state.progress[track];
+const cardTopic = card => track === 'lc' ? card.lc.topic : card.uni;
+const trackCards = () => topics[track].flatMap(({ id }) => {
+  const visible = cards.filter(card => visibleIn(card, track, level) && cardTopic(card) === id);
+  const pinned = catalogue.order?.[id] ?? [];
+  return [...pinned.map(pin => visible.find(card => card.id === pin)).filter(Boolean),
+    ...visible.filter(card => !pinned.includes(card.id))];
+});
+const topicLabel = card => topics[track].find(item => item.id === cardTopic(card))?.title;
+const activeCard = () => mode === 'quiz' ? round?.cards[round.index] : pool[index];
+
+async function json(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error('Catalogue request failed: ' + response.status);
+  return response.json();
 }
-const correctPlaceholder=''; // Correct answer is derived from each card's literal translation.
-document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;onlyMissed=false;document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t===b));reset()});$('#search').oninput=reset;$('#savedOnly').onchange=reset;document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)||e.target.tagName==='BUTTON'||e.target.getAttribute('role')==='button')return;if(e.code==='Space'&&mode==='flash'){e.preventDefault();if(!revealed){revealed=true;const c=current();if(c)mark(c);render()}else next()}if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')next(-1)});topics();render();
+
+async function start() {
+  catalogue = await json('./content/catalogue.json');
+  topics = catalogue.topics;
+  const packs = await Promise.all(catalogue.packs.map(path => json('./content/' + path)));
+  cards = packs.flat();
+  state = loadState(storage, cards);
+  saveState(storage, state);
+  level = state.level === 'higher' ? 'higher' : 'ordinary';
+  if (requestedTrack) setTrack(requestedTrack, undefined, undefined, { focus: true });
+  else restoreRoute();
+}
+
+function announce(message = '') {
+  const notice = $('notice');
+  notice.hidden = !message;
+  notice.textContent = message;
+}
+
+function button(action, label, options = {}) {
+  const { primary, disabled, attrs = '' } = options;
+  return '<button type="button" class="btn' + (primary ? ' primary' : '') + '" data-action="' +
+    action + '"' + (disabled ? ' disabled' : '') + ' ' + attrs + '>' + label + '</button>';
+}
+
+function showHome(writeRoute = true) {
+  clearTimeout(timer);
+  track = null;
+  auto = false;
+  $('workspace').hidden = true;
+  $('welcome').hidden = false;
+  for (const btn of $('tracks').querySelectorAll('button')) btn.setAttribute('aria-pressed', 'false');
+  if (writeRoute && location.hash) history.pushState(null, '', location.pathname + location.search);
+}
+
+function setTrack(next, nextLevel, id, { writeRoute = true, focus = false } = {}) {
+  track = next;
+  level = nextLevel ?? level;
+  state.lastTrack = next;
+  state.level = level;
+  saveState(storage, state);
+  mode = 'learn';
+  topic = 'all';
+  auto = false;
+  $('level').value = level;
+  $('search').value = '';
+  $('saved-only').checked = false;
+  $('level-label').hidden = track !== 'lc';
+  $('syllabus').hidden = track !== 'lc';
+  $('topic-label').textContent = track === 'lc' ? 'Strand' : 'Branch of maths';
+  $('track-heading').textContent = track === 'lc' ? 'Leaving Cert Maths' : 'University Maths';
+  $('track-description').textContent = track === 'lc'
+    ? 'Find the notation for your exam level.'
+    : 'Explore notation from your maths modules.';
+  $('topic').replaceChildren(new Option('All topics', 'all'), ...topics[track].map(item => new Option(item.title, item.id)));
+  for (const btn of $('tracks').querySelectorAll('button')) btn.setAttribute('aria-pressed', String(btn.dataset.track === track));
+  $('welcome').hidden = true;
+  $('workspace').hidden = false;
+  resetPool(id);
+  const found = !id || pool.some(card => card.id === id);
+  announce(found ? '' : 'That card is unavailable in this track or level. Choose a card from the library.');
+  if (writeRoute) pushRoute(found ? id : undefined);
+  if (focus) $('track-heading').focus();
+}
+
+function pushRoute(id) {
+  const hash = routeFor(track, level, id);
+  if (location.hash !== hash) history.pushState(null, '', hash);
+}
+
+function restoreRoute() {
+  if (!state) return;
+  const route = parseRoute(location.hash);
+  if (route) setTrack(route.track, route.level, route.id, { writeRoute: false });
+  else if (location.hash === '#main') return;
+  else if (state.lastTrack === 'uni' || state.lastTrack === 'lc') {
+    setTrack(state.lastTrack, level, undefined, { writeRoute: false });
+  } else showHome(false);
+}
+
+function available() {
+  return trackCards().filter(card => topic === 'all' || cardTopic(card) === topic);
+}
+
+function filtered() {
+  const matching = available().filter(card => !$('saved-only').checked || progress().saved.includes(card.id));
+  return searchCards(matching, $('search').value);
+}
+
+function resetPool(id) {
+  retrying = false;
+  pool = mode === 'review' ? dueCards(available(), progress()).slice(0, 10) : filtered();
+  index = Math.max(0, pool.findIndex(card => card.id === id));
+  selected = -1;
+  revealed = false;
+  round = mode === 'quiz' ? newRound(shuffled(pool).slice(0, 10)) : undefined;
+  render();
+}
+
+function missedCards() {
+  return available().filter(card => progress().review[card.id]?.step === -1);
+}
+
+function newRound(items) {
+  return { cards: items, index: 0, answered: null, options: [], correct: 0, missed: [], done: false };
+}
+
+function renderStats() {
+  const eligible = trackCards();
+  const data = progress();
+  const open = new Set(data.opened);
+  $('opened').textContent = eligible.filter(card => open.has(card.id)).length;
+  let attempts = data.attempts;
+  let correct = data.correct;
+  if (track === 'lc') {
+    attempts = eligible.reduce((total, card) => total + (data.answers[card.id]?.attempts ?? 0), 0);
+    correct = eligible.reduce((total, card) => total + (data.answers[card.id]?.correct ?? 0), 0);
+  }
+  $('accuracy').textContent = attempts ? Math.round(correct / attempts * 100) + '%' : '—';
+  const due = dueCards(eligible, data).length;
+  $('due-count').hidden = !due;
+  $('due-count').textContent = due;
+  $('due-count').setAttribute('aria-label', due + ' due');
+}
+
+function renderMatches() {
+  const searching = Boolean($('search').value.trim());
+  const show = mode === 'learn' && pool.length && (searching || topic !== 'all' || $('saved-only').checked);
+  results.hidden = !show;
+  if (!show) {
+    results.replaceChildren();
+    return;
+  }
+  const matchLabel = pool.length === 1 ? '1 card' : pool.length + ' cards';
+  const matches = pool.slice(0, 24).map((card, i) =>
+    '<button type="button" class="btn match" data-action="open" data-index="' + i +
+    '" aria-pressed="' + (i === index) + '"><span>' + html(card.notation) + '</span><small>' +
+    html(card.title) + '</small></button>').join('');
+  results.innerHTML = '<p class="results-head" role="status">' + matchLabel +
+    (pool.length > 24 ? ' · First 24 shown. Refine your search or use Next card.' : '') +
+    '</p><div class="matches">' + matches + '</div>';
+}
+
+function explanation(card) {
+  const phrases = card.parts.map(([, text], i) =>
+    '<button type="button" class="phrase" data-part="' + i + '" aria-pressed="' +
+    (selected === i) + '">' + html(text) + '</button>').join(' ');
+  return '<section class="plain"><h2>In plain English</h2><div>' + phrases +
+    '</div></section><div class="details"><section><h2>Worked example</h2><p>' +
+    html(card.example) + '</p></section><section><h2>Common misreading</h2><p>' +
+    html(card.note) + '</p></section></div>';
+}
+
+function expression(card, interactive) {
+  if (!interactive) return '<div class="expression" role="math">' + html(card.notation) + '</div>';
+  const tokens = card.parts.map(([token], i) =>
+    '<button type="button" class="token" data-part="' + i + '" aria-pressed="' +
+    (selected === i) + '" aria-label="Explain ' + html(token) + '">' + html(token) + '</button>').join(' ');
+  return '<div class="expression" aria-label="Notation parts">' + tokens + '</div>';
+}
+
+function cardShell(card, content, interactive) {
+  const isSaved = progress().saved.includes(card.id);
+  return '<article class="card" aria-label="' + html(interactive ? card.title : 'Notation card') + '"><div class="card-head">' +
+    '<span class="category">' + html(topicLabel(card)) + '</span><div class="card-actions">' +
+    button('save', isSaved ? 'Saved' : 'Save', { attrs: 'aria-label="Save card" aria-pressed="' + isSaved + '"' }) +
+    button('share', 'Copy link') + '</div></div>' + expression(card, interactive) + content + '</article>';
+}
+
+function learnView(card) {
+  if (!progress().opened.includes(card.id)) {
+    progress().opened.push(card.id);
+    saveState(storage, state);
+  }
+  return cardShell(card, explanation(card), true) + '<div class="controls">' +
+    button('prev', '← Previous', { disabled: pool.length < 2 }) +
+    '<span class="position">' + (index + 1) + ' of ' + pool.length + '</span><span class="spacer"></span>' +
+    button('next', 'Next card →', { primary: true, disabled: pool.length < 2 }) + '</div>';
+}
+
+function quizView(card) {
+  if (!round.options.length) {
+    round.options = shuffled([{ text: reading(card), correct: true },
+      ...card.wrong.map(text => ({ text, correct: false }))]);
+  }
+  const options = round.options.map((option, i) => {
+    const answered = round.answered !== null;
+    const style = answered && (option.correct ? ' correct' : round.answered === i ? ' wrong' : '') || '';
+    return '<button type="button" class="btn option' + style + '" data-action="answer" data-index="' +
+      i + '"' + (answered ? ' disabled' : '') + '>' + html(option.text) + '</button>';
+  }).join('');
+  const correct = round.options[round.answered]?.correct;
+  const feedback = round.answered === null ? '' :
+    '<div class="feedback" tabindex="-1" id="quiz-feedback" role="status"><strong>' +
+    (correct ? 'Correct.' : 'The correct reading is ' + html(reading(card))) +
+    '</strong><p>' + html(card.example) + '</p><p>' + html(card.note) + '</p></div>';
+  return cardShell(card, '<p class="question">Which reading matches this notation?</p>' + options + feedback, false) +
+    '<div class="controls"><span class="position">Question ' + (round.index + 1) + ' of ' +
+    round.cards.length + '</span><span class="spacer"></span>' +
+    button('quiz-next', round.index + 1 === round.cards.length ? 'See results' : 'Next question →',
+      { primary: true, disabled: round.answered === null }) + '</div>';
+}
+
+function quizSummary() {
+  return '<section class="empty"><h2 id="round-heading" tabindex="-1">Quiz complete</h2><p class="round-result">' +
+    round.correct + ' / ' + round.cards.length + '</p><div class="controls">' +
+    (round.missed.length ? button('retry', 'Retry missed cards', { primary: true }) : '') +
+    button('restart', 'New round') + '</div></section>';
+}
+
+function recallView(card) {
+  const review = mode === 'review';
+  const content = revealed ? explanation(card) :
+    '<p class="flash-note">Say what the notation means, then check your answer.</p>' +
+    button('reveal', 'Reveal translation', { primary: true });
+  const autoControl = review ? '' :
+    '<label class="check"><input type="checkbox" id="auto" ' + (auto ? 'checked' : '') + '> Auto</label>' +
+    '<select id="seconds" aria-label="Seconds before reveal">' + [4, 6, 10].map(value =>
+      '<option value="' + value + '"' + (seconds === value ? ' selected' : '') + '>' +
+      value + ' seconds</option>').join('') + '</select><span class="spacer"></span>' + button('next', 'Skip →');
+  const ratings = revealed
+    ? button('again', 'Practise again') + button('known', 'Got it', { primary: true })
+    : '';
+  return cardShell(card, content, revealed) + '<div class="controls"><span class="position">' +
+    (review ? (retrying ? 'Retry · ' : 'Due · ') + pool.length + ' left' : (index + 1) + ' of ' + pool.length) +
+    '</span><span class="spacer"></span>' + ratings + autoControl + '</div>';
+}
+
+function render() {
+  clearTimeout(timer);
+  $('filters').hidden = mode === 'review';
+  for (const btn of modeButtons) btn.setAttribute('aria-pressed', String(btn.dataset.mode === mode));
+  renderMatches();
+  const card = activeCard();
+  if (mode === 'quiz' && round.done) {
+    stage.innerHTML = quizSummary();
+  } else if (!card) {
+    const [heading, detail] = mode === 'review'
+      ? [retrying ? 'Retry complete' : 'No cards due here', 'Practise in Quiz or Rapid Fire to build your review queue.']
+      : ['No matching cards', 'Try another search, topic, or turn off Saved only.'];
+    stage.innerHTML = '<section class="empty"><h2 tabindex="-1" id="empty-heading">' +
+      heading + '</h2><p>' + detail + '</p></section>';
+  } else if (mode === 'learn') {
+    stage.innerHTML = learnView(card);
+  } else if (mode === 'quiz') {
+    stage.innerHTML = quizView(card);
+  } else {
+    stage.innerHTML = recallView(card);
+    if (mode === 'flash' && auto && !document.hidden) {
+      timer = setTimeout(() => {
+        if (revealed) move(1);
+        else {
+          revealed = true;
+          render();
+        }
+      }, (revealed ? Math.max(seconds, 5) : seconds) * 1000);
+    }
+  }
+  if (mode === 'review' && !retrying && missedCards().length) {
+    stage.insertAdjacentHTML('afterbegin', '<div class="filters">' +
+      button('review-missed', 'Retry missed cards (' + missedCards().length + ')') + '</div>');
+  }
+  if (mode === 'review' && retrying) {
+    stage.insertAdjacentHTML('beforeend', '<div class="controls">' + button('review-due', 'Back to due cards') + '</div>');
+  }
+  renderStats();
+}
+
+function selectPart(btn) {
+  selected = Number(btn.dataset.part);
+  stage.querySelectorAll('[data-part]').forEach(part => part.setAttribute('aria-pressed', String(Number(part.dataset.part) === selected)));
+  const [, phrase] = activeCard().parts[selected];
+  $('part-status').textContent = btn.classList.contains('token') ? phrase : activeCard().parts[selected][0];
+}
+
+function move(delta) {
+  if (!pool.length) return;
+  index = (index + delta + pool.length) % pool.length;
+  selected = -1;
+  revealed = false;
+  announce();
+  render();
+}
+
+function focusCard() {
+  const target = stage.querySelector('[data-part], [data-action="answer"], [data-action="reveal"], h2');
+  if (target) target.focus();
+}
+
+function toggleSaved(card) {
+  const saved = progress().saved;
+  const wasSaved = saved.includes(card.id);
+  progress().saved = wasSaved ? saved.filter(id => id !== card.id) : [...saved, card.id];
+  saveState(storage, state);
+  announce(wasSaved ? 'Card removed from saved.' : 'Card saved.');
+  if (wasSaved && $('saved-only').checked && mode !== 'review' && mode !== 'quiz') {
+    resetPool();
+    (stage.querySelector('[data-action="save"]') ?? $('saved-only')).focus();
+  } else {
+    const btn = stage.querySelector('[data-action="save"]');
+    btn.setAttribute('aria-pressed', String(!wasSaved));
+    btn.textContent = wasSaved ? 'Save' : 'Saved';
+  }
+}
+
+async function copyLink(card) {
+  const url = new URL(routeFor(track, level, card.id), location.href).href;
+  try {
+    await navigator.clipboard.writeText(url);
+    announce('Card link copied.');
+  } catch {
+    announce();
+    const notice = $('notice');
+    notice.hidden = false;
+    const label = document.createElement('label');
+    label.textContent = 'Copy this card link ';
+    const input = document.createElement('input');
+    input.value = url;
+    input.readOnly = true;
+    label.append(input);
+    notice.replaceChildren(label);
+    input.focus();
+    input.select();
+  }
+}
+
+function answer(i) {
+  if (round.answered !== null) return;
+  const card = activeCard();
+  const option = round.options[i];
+  if (!option) return;
+  round.answered = i;
+  if (option.correct) round.correct++;
+  else round.missed.push(card);
+  recordQuiz(progress(), card.id, option.correct);
+  saveState(storage, state);
+  render();
+  $('quiz-feedback').focus();
+}
+
+function rate(correct) {
+  const card = activeCard();
+  recordRecall(progress(), card.id, correct);
+  saveState(storage, state);
+  if (mode === 'review') {
+    pool.splice(index, 1);
+    index = Math.min(index, Math.max(0, pool.length - 1));
+    revealed = false;
+    selected = -1;
+    render();
+  } else move(1);
+  announce(correct ? 'Next review scheduled for ' + progress().review[card.id].due + '.' : 'Added to review for tomorrow.');
+  focusCard();
+}
+
+function activateMode(nextMode) {
+  if (!track) return;
+  mode = nextMode;
+  auto = false;
+  announce();
+  resetPool();
+}
+
+function stageAction(btn) {
+  const action = btn.dataset.action;
+  const card = activeCard();
+  switch (action) {
+    case 'save': toggleSaved(card); break;
+    case 'share': void copyLink(card); break;
+    case 'prev':
+    case 'next':
+      move(action === 'prev' ? -1 : 1);
+      stage.querySelector('[data-action="' + action + '"]')?.focus();
+      break;
+    case 'answer': answer(Number(btn.dataset.index)); break;
+    case 'quiz-next':
+      if (round.index + 1 === round.cards.length) round.done = true;
+      else {
+        round.index++;
+        round.answered = null;
+        round.options = [];
+      }
+      render();
+      if (round.done) $('round-heading').focus();
+      else focusCard();
+      break;
+    case 'retry':
+      round = newRound(shuffled(round.missed));
+      render();
+      focusCard();
+      break;
+    case 'restart':
+      resetPool();
+      focusCard();
+      break;
+    case 'review-missed':
+      pool = missedCards().slice(0, 10);
+      index = 0;
+      selected = -1;
+      revealed = false;
+      retrying = true;
+      render();
+      focusCard();
+      break;
+    case 'review-due':
+      resetPool();
+      focusCard();
+      break;
+    case 'reveal':
+      revealed = true;
+      render();
+      stage.querySelector('[data-action="again"]').focus();
+      break;
+    case 'again': rate(false); break;
+    case 'known': rate(true); break;
+  }
+}
+
+for (const btn of trackButtons) {
+  btn.addEventListener('click', () => {
+    if (!state) {
+      requestedTrack = btn.dataset.track;
+    } else if (track !== btn.dataset.track || $('workspace').hidden) {
+      setTrack(btn.dataset.track, undefined, undefined, { focus: true });
+    }
+  });
+}
+for (const btn of modeButtons) btn.addEventListener('click', () => activateMode(btn.dataset.mode));
+
+$('home').addEventListener('click', () => {
+  if (!state) return;
+  state.lastTrack = null;
+  saveState(storage, state);
+  showHome();
+  $('main').focus();
+});
+document.querySelector('.skip').addEventListener('click', event => {
+  event.preventDefault();
+  $('main').focus();
+  $('main').scrollIntoView();
+});
+$('level').addEventListener('change', () => {
+  if (track !== 'lc') return;
+  level = $('level').value;
+  state.level = level;
+  saveState(storage, state);
+  pushRoute();
+  announce();
+  resetPool();
+});
+$('topic').addEventListener('change', () => {
+  topic = $('topic').value;
+  announce();
+  resetPool();
+});
+for (const [id, event] of [['search', 'input'], ['saved-only', 'change']]) {
+  $(id).addEventListener(event, () => {
+    announce();
+    resetPool();
+  });
+}
+results.addEventListener('click', event => {
+  const btn = event.target.closest('[data-action="open"]');
+  if (!btn) return;
+  index = Number(btn.dataset.index);
+  selected = -1;
+  announce();
+  pushRoute(pool[index].id);
+  render();
+  focusCard();
+});
+stage.addEventListener('click', event => {
+  const btn = event.target.closest('button');
+  if (!btn) return;
+  if (btn.hasAttribute('data-part')) selectPart(btn);
+  else stageAction(btn);
+});
+stage.addEventListener('change', event => {
+  const id = event.target.id;
+  if (id === 'auto') auto = event.target.checked;
+  else if (id === 'seconds') seconds = Number(event.target.value);
+  else return;
+  render();
+  $(id).focus();
+});
+document.addEventListener('keydown', event => {
+  if (!track || event.altKey || event.ctrlKey || event.metaKey ||
+      event.target.closest?.('button, input, select, a, textarea, [contenteditable]')) return;
+  if (event.code === 'Space' && (mode === 'flash' || mode === 'review') && !revealed && activeCard()) {
+    event.preventDefault();
+    revealed = true;
+    render();
+    stage.querySelector('[data-action="again"]').focus();
+  } else if ((mode === 'learn' || mode === 'flash') && ['ArrowLeft', 'ArrowRight'].includes(event.key) && pool.length) {
+    event.preventDefault();
+    move(event.key === 'ArrowLeft' ? -1 : 1);
+  }
+});
+document.addEventListener('visibilitychange', () => {
+  clearTimeout(timer);
+  if (!document.hidden && track && mode === 'flash' && auto) render();
+});
+window.addEventListener('hashchange', () => {
+  if (location.hash === '#main') return;
+  if (!location.hash) showHome(false);
+  else restoreRoute();
+});
+
+start().catch(error => {
+  console.error(error);
+  $('load-error').textContent = 'The notation library could not be loaded. Refresh the page to try again.';
+  $('load-error').hidden = false;
+});

@@ -1,0 +1,271 @@
+[
+  {
+    "id": "sample-mean",
+    "title": "Sample mean",
+    "notation": "x̄",
+    "parts": [
+      [
+        "x̄",
+        "The arithmetic mean of observations in a sample."
+      ]
+    ],
+    "example": "For 2, 4 and 9, x̄=(2+4+9)/3=5.",
+    "note": "A bar over x means a sample mean. μ usually denotes a population mean.",
+    "wrong": [
+      "The middle observation after sorting."
+    ],
+    "aliases": [
+      "x bar",
+      "xbar",
+      "sample mean",
+      "average"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.6",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "standard-deviation",
+    "title": "Standard deviation",
+    "notation": "σ",
+    "parts": [
+      [
+        "σ",
+        "The population standard deviation, the square root of its variance."
+      ]
+    ],
+    "example": "For a population consisting of 0 and 4, the mean is 2, the variance is 4 and σ=2.",
+    "note": "Lowercase σ often denotes spread. Uppercase Σ or ∑ marks summation.",
+    "wrong": [
+      "The population variance before taking the square root."
+    ],
+    "aliases": [
+      "sigma",
+      "σ",
+      "spread",
+      "standard deviation"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.6",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "sample-proportion",
+    "title": "Sample proportion",
+    "notation": "p̂",
+    "parts": [
+      [
+        "p̂",
+        "The observed fraction of the sample in the category of interest."
+      ]
+    ],
+    "example": "If 18 out of 60 students walk to school, p̂=18/60=0.3.",
+    "note": "The hat marks a sample estimate. The population proportion may differ.",
+    "wrong": [
+      "The exact proportion of the whole population."
+    ],
+    "aliases": [
+      "p hat",
+      "phat",
+      "proportion"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.7",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "z-score",
+    "title": "Standard score",
+    "notation": "z = (x − μ)/σ",
+    "parts": [
+      [
+        "z = (x − μ)/σ",
+        "The number of population standard deviations that x is above or below μ."
+      ]
+    ],
+    "example": "With μ=70, σ=10 and x=50, z=−2.",
+    "note": "A negative z-score places a value below the mean.",
+    "wrong": [
+      "The distance from the mean in the original units."
+    ],
+    "aliases": [
+      "z score",
+      "z-score",
+      "standardise",
+      "normal distribution"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "confidence-interval",
+    "title": "Confidence interval",
+    "notation": "p̂ ± 1.96 SE",
+    "parts": [
+      [
+        "p̂ ± 1.96 SE",
+        "An approximate 95% confidence interval from the estimate minus the margin to the estimate plus it."
+      ]
+    ],
+    "example": "If p̂=0.50 and SE=0.02, the interval is about [0.461,0.539].",
+    "note": "Under the method’s assumptions, about 95% of such intervals cover the fixed true value in repeated sampling.",
+    "wrong": [
+      "95% of the observations lie inside the interval."
+    ],
+    "aliases": [
+      "confidence interval",
+      "ci",
+      "margin of error",
+      "±"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.7",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "null-hypothesis",
+    "title": "Null hypothesis",
+    "notation": "H₀ : p = p₀",
+    "parts": [
+      [
+        "H₀ : p = p₀",
+        "The null hypothesis claims the population proportion equals p₀."
+      ]
+    ],
+    "example": "To test a claim of 50% support, write H₀:p=0.50 and compare a sample against that claim.",
+    "note": "The claim is about the population, rather than the exact result of a sample.",
+    "wrong": [
+      "The sample proportion must be exactly p₀."
+    ],
+    "aliases": [
+      "h0",
+      "null",
+      "hypothesis test"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.7",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "p-value",
+    "title": "p-value",
+    "notation": "p-value",
+    "parts": [
+      [
+        "p-value",
+        "Under the null, the probability of a test result at least as extreme as the one observed in the direction or directions tested."
+      ]
+    ],
+    "example": "For a fair coin, the chance of all ten tosses landing on the same side is 2×(½)¹⁰ ≈ 0.002. That is the two-sided p-value for 10 heads.",
+    "note": "This probability is computed assuming the null.",
+    "wrong": [
+      "The probability that the null hypothesis is true."
+    ],
+    "aliases": [
+      "p value",
+      "pvalue",
+      "significance"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.7",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "correlation",
+    "title": "Pearson correlation",
+    "notation": "r",
+    "parts": [
+      [
+        "r",
+        "The sample Pearson correlation coefficient, between −1 and 1."
+      ]
+    ],
+    "example": "For x values 1,2,3 paired with y values 3,2,1, r=−1.",
+    "note": "Correlation measures linear association. It does not establish causation.",
+    "wrong": [
+      "The slope of the line through the data in original units."
+    ],
+    "aliases": [
+      "correlation",
+      "pearson"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.6",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "standard-error",
+    "title": "Standard error of the sample mean",
+    "notation": "SE(x̄) = σ/√n",
+    "parts": [
+      [
+        "SE(x̄) = σ/√n",
+        "The standard deviation of the sample mean for n independent observations with population standard deviation σ."
+      ]
+    ],
+    "example": "If σ=12 and n=36, the standard error is 2.",
+    "note": "Standard error describes how a statistic varies from sample to sample.",
+    "wrong": [
+      "The standard deviation of each individual observation is σ/√n."
+    ],
+    "aliases": [
+      "standard error",
+      "se",
+      "sampling distribution"
+    ],
+    "uni": "statistics",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.7",
+      "levels": [
+        "higher"
+      ]
+    }
+  }
+]

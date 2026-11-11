@@ -1,0 +1,457 @@
+[
+  {
+    "id": "integers",
+    "title": "Integers",
+    "notation": "k ∈ ℤ",
+    "parts": [
+      [
+        "k ∈ ℤ",
+        "k belongs to the integers."
+      ]
+    ],
+    "example": "−4, 0 and 7 are integers, while ½ is not.",
+    "note": "Negative whole numbers are integers as well.",
+    "wrong": [
+      "k must be strictly positive."
+    ],
+    "aliases": [
+      "integers",
+      "integer",
+      "ℤ"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "rational-numbers",
+    "title": "Rational numbers",
+    "notation": "x ∈ ℚ",
+    "parts": [
+      [
+        "x ∈ ℚ",
+        "x can be written as a ratio of two integers with nonzero denominator."
+      ]
+    ],
+    "example": "0.75=3/4 is rational, and √2 is irrational.",
+    "note": "A number with a repeating decimal can still be rational.",
+    "wrong": [
+      "x must have a terminating decimal expansion."
+    ],
+    "aliases": [
+      "rational",
+      "irrational",
+      "ℚ"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "imaginary-unit",
+    "title": "Imaginary unit",
+    "notation": "i² = −1",
+    "parts": [
+      [
+        "i² = −1",
+        "Squaring the imaginary unit i gives negative one."
+      ]
+    ],
+    "example": "(2i)²=4i²=−4.",
+    "note": "In a+bi, b is the real coefficient of i.",
+    "wrong": [
+      "Squaring the imaginary unit gives positive one."
+    ],
+    "aliases": [
+      "imaginary unit",
+      "complex number",
+      "i squared"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "arithmetic-sequence",
+    "title": "Arithmetic sequence",
+    "notation": "Tₙ = a + (n−1)d",
+    "parts": [
+      [
+        "Tₙ = a + (n−1)d",
+        "The nth term is the first term a plus n−1 copies of the common difference d."
+      ]
+    ],
+    "example": "If a=4 and d=3, the fourth term is 4+3×3=13.",
+    "note": "The first term already equals a, so it needs zero steps.",
+    "wrong": [
+      "Add n copies of d to the first term."
+    ],
+    "aliases": [
+      "arithmetic sequence",
+      "nth term",
+      "Tn"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "arithmetic-series",
+    "title": "Sum of an arithmetic series",
+    "notation": "Sₙ = (n/2)(a + l)",
+    "parts": [
+      [
+        "Sₙ = (n/2)(a + l)",
+        "Multiply the number of terms by the average of the first and last terms."
+      ]
+    ],
+    "example": "For 2+5+8+11, S₄=4(2+11)/2=26.",
+    "note": "Sₙ is the sum of the terms. Tₙ represents just the nth term.",
+    "wrong": [
+      "Take only the last term of the sequence."
+    ],
+    "aliases": [
+      "arithmetic series",
+      "sum to n terms"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "geometric-sequence",
+    "title": "Geometric sequence",
+    "notation": "Tₙ = arⁿ⁻¹",
+    "parts": [
+      [
+        "Tₙ = arⁿ⁻¹",
+        "The nth term is the first term a multiplied by the common ratio r a total of n−1 times."
+      ]
+    ],
+    "example": "For 2,6,18,… the ratio is 3 and T₄=2×3³=54.",
+    "note": "The common ratio multiplies each term. Adding the same amount gives an arithmetic sequence.",
+    "wrong": [
+      "Add r to the first term n−1 times."
+    ],
+    "aliases": [
+      "geometric sequence",
+      "common ratio"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "geometric-series",
+    "title": "Infinite geometric series",
+    "notation": "S∞ = a/(1−r)",
+    "parts": [
+      [
+        "S∞ = a/(1−r)",
+        "The sum of all terms is a divided by one minus r, when |r|<1."
+      ]
+    ],
+    "example": "4+2+1+⋯ has a=4 and r=½, so its sum is 8.",
+    "note": "The sum formula requires the magnitude of the ratio to be less than one.",
+    "wrong": [
+      "This gives a finite sum for every value of r."
+    ],
+    "aliases": [
+      "infinite geometric series",
+      "sum to infinity"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "induction-step",
+    "title": "Inductive step",
+    "notation": "P(k) ⇒ P(k+1)",
+    "parts": [
+      [
+        "P(k) ⇒ P(k+1)",
+        "Assuming the statement for k, prove it for the next integer k+1."
+      ]
+    ],
+    "example": "If 1+⋯+k=k(k+1)/2, adding k+1 gives (k+1)(k+2)/2.",
+    "note": "An induction proof also requires a base case.",
+    "wrong": [
+      "Test only the statement P(1), then stop."
+    ],
+    "aliases": [
+      "induction",
+      "inductive step",
+      "proof"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "negative-index",
+    "title": "Negative exponent",
+    "notation": "a⁻ⁿ = 1/aⁿ",
+    "parts": [
+      [
+        "a⁻ⁿ = 1/aⁿ",
+        "A negative exponent gives the reciprocal of the positive power, for nonzero a."
+      ]
+    ],
+    "example": "2⁻³=1/2³=1/8.",
+    "note": "A negative exponent does not itself make the result negative.",
+    "wrong": [
+      "Negate the positive power of a."
+    ],
+    "aliases": [
+      "indices",
+      "negative exponent",
+      "reciprocal"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "fractional-index",
+    "title": "Fractional exponent",
+    "notation": "a¹⁄ⁿ = ⁿ√a",
+    "parts": [
+      [
+        "a¹⁄ⁿ = ⁿ√a",
+        "For positive a, raise it to one over n by taking its nth root."
+      ]
+    ],
+    "example": "27¹⁄³=3 because 3³=27.",
+    "note": "The denominator of the exponent gives the root index.",
+    "wrong": [
+      "Divide a by n."
+    ],
+    "aliases": [
+      "fractional exponent",
+      "root",
+      "surd"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "scientific-notation",
+    "title": "Scientific notation",
+    "notation": "3.2 × 10⁴",
+    "parts": [
+      [
+        "3.2 × 10⁴",
+        "Multiply 3.2 by ten to the fourth power."
+      ]
+    ],
+    "example": "3.2×10⁴=32,000.",
+    "note": "An exponent of −4 would instead move the decimal four places left.",
+    "wrong": [
+      "Multiply 3.2 by forty."
+    ],
+    "aliases": [
+      "scientific notation",
+      "standard form",
+      "powers of ten"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "percentage-error",
+    "title": "Percentage error",
+    "notation": "100 × |measured − exact|/|exact|",
+    "parts": [
+      [
+        "100 × |measured − exact|/|exact|",
+        "Divide absolute error by the magnitude of the nonzero exact value and express it as a percentage."
+      ]
+    ],
+    "example": "A measurement of 48 instead of 50 gives 100×2/50=4%.",
+    "note": "Divide by the reference value, rather than by the measured value.",
+    "wrong": [
+      "Divide the error by the measured value and report that percentage."
+    ],
+    "aliases": [
+      "percentage error",
+      "relative error"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "compound-interest",
+    "title": "Compound interest",
+    "notation": "A = P(1+i)ⁿ",
+    "parts": [
+      [
+        "A = P(1+i)ⁿ",
+        "The starting amount P is multiplied by one plus the rate i for each of n periods."
+      ]
+    ],
+    "example": "€200 at 5% per year for two years grows to 200×1.05²=€220.50.",
+    "note": "Use 0.05 for a rate of 5%. The rate and period count must use the same time unit.",
+    "wrong": [
+      "Add interest each period on the original amount only."
+    ],
+    "aliases": [
+      "compound interest",
+      "interest rate",
+      "depreciation"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "present-value",
+    "title": "Present value",
+    "notation": "P = A/(1+i)ⁿ",
+    "parts": [
+      [
+        "P = A/(1+i)ⁿ",
+        "Discount a future amount A by dividing by the growth factor for n periods."
+      ]
+    ],
+    "example": "€121 due in two years at 10% per year has present value €121/1.1²=€100.",
+    "note": "Discounting reverses compounding.",
+    "wrong": [
+      "Multiply the future amount by the growth factor."
+    ],
+    "aliases": [
+      "present value",
+      "discount factor"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "cylinder-volume",
+    "title": "Volume of a cylinder",
+    "notation": "V = πr²h",
+    "parts": [
+      [
+        "V = πr²h",
+        "Multiply the area of the circular base by the perpendicular height."
+      ]
+    ],
+    "example": "Radius 3 cm and height 5 cm give volume 45π cm³.",
+    "note": "Use the radius, rather than the diameter. Volume is measured in cubic units.",
+    "wrong": [
+      "Multiply the base circumference by the height."
+    ],
+    "aliases": [
+      "volume",
+      "cylinder",
+      "cubic units"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.4",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "sphere-area",
+    "title": "Surface area of a sphere",
+    "notation": "A = 4πr²",
+    "parts": [
+      [
+        "A = 4πr²",
+        "The sphere’s surface area is four times the area of a disc of radius r."
+      ]
+    ],
+    "example": "For r=2 cm, the surface area is 16π cm².",
+    "note": "Square units measure area. The volume formula uses r cubed.",
+    "wrong": [
+      "This gives the sphere’s volume."
+    ],
+    "aliases": [
+      "surface area",
+      "sphere"
+    ],
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.4",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  }
+]
