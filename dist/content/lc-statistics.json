@@ -1,0 +1,354 @@
+[
+  {
+    "id": "permutations",
+    "title": "Ordered selections",
+    "notation": "nPr",
+    "parts": [
+      [
+        "nPr",
+        "The number of ways to select and order r objects from n distinct objects."
+      ]
+    ],
+    "example": "From 5 people, there are 5×4=20 ways to choose a chair and a different secretary.",
+    "note": "Swapping the chair and secretary gives a different outcome.",
+    "wrong": [
+      "The number of selections when order is ignored."
+    ],
+    "aliases": [
+      "permutation",
+      "n P r",
+      "nPr"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "combinations",
+    "title": "Unordered selections",
+    "notation": "nCr",
+    "parts": [
+      [
+        "nCr",
+        "The number of ways to choose r objects from n distinct objects without regard to order."
+      ]
+    ],
+    "example": "There are 6 pairs of people in a group of 4, so 4C2=6.",
+    "note": "Choosing A then B gives the same pair as choosing B then A.",
+    "wrong": [
+      "The number of arrangements when order matters."
+    ],
+    "aliases": [
+      "combination",
+      "binomial coefficient",
+      "n choose r",
+      "nCr"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "probability-event",
+    "title": "Probability of an event",
+    "notation": "P(A)",
+    "parts": [
+      [
+        "P(A)",
+        "The chance that event A occurs."
+      ]
+    ],
+    "example": "On a fair die, if A is rolling a 6, P(A)=1/6.",
+    "note": "A probability lies between 0 and 1 inclusive.",
+    "wrong": [
+      "The number of outcomes in A, irrespective of how likely they are."
+    ],
+    "aliases": [
+      "probability",
+      "event"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "sample-space",
+    "title": "Sample space",
+    "notation": "S = {H,T}",
+    "parts": [
+      [
+        "S = {H,T}",
+        "The possible outcomes of this trial are heads and tails."
+      ]
+    ],
+    "example": "A single coin toss has these two outcomes.",
+    "note": "The sample space contains all possible outcomes. An event can contain only some of them.",
+    "wrong": [
+      "The event that a single toss is both heads and tails."
+    ],
+    "aliases": [
+      "sample space",
+      "outcomes",
+      "omega",
+      "Ω"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "probability-complement",
+    "title": "Complement of an event",
+    "notation": "P(Aᶜ)",
+    "parts": [
+      [
+        "P(Aᶜ)",
+        "The probability that A does not happen."
+      ]
+    ],
+    "example": "If P(A)=0.3, then P(Aᶜ)=1−0.3=0.7.",
+    "note": "The complement includes every outcome outside A in the sample space.",
+    "wrong": [
+      "The probability that A happens twice."
+    ],
+    "aliases": [
+      "complement",
+      "not A",
+      "A prime"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "probability-addition",
+    "title": "Addition rule for probabilities",
+    "notation": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+    "parts": [
+      [
+        "P(A ∪ B)",
+        "The chance at least one event occurs"
+      ],
+      [
+        "= P(A) + P(B) − P(A ∩ B)",
+        "is the sum of their chances with the overlap subtracted once."
+      ]
+    ],
+    "example": "If P(A)=0.5, P(B)=0.4 and P(A∩B)=0.2, the union has probability 0.7.",
+    "note": "Adding the two probabilities alone double counts the overlap.",
+    "wrong": [
+      "The chance that both events occur."
+    ],
+    "aliases": [
+      "addition rule",
+      "union probability"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "bernoulli-sequence",
+    "title": "First success on a specified trial",
+    "notation": "(1 − p)ⁿ⁻¹ × p",
+    "parts": [
+      [
+        "(1 − p)ⁿ⁻¹",
+        "The first n−1 independent trials fail"
+      ],
+      [
+        "× p",
+        "and trial n succeeds."
+      ]
+    ],
+    "example": "A first head on toss 3 has probability ½×½×½=⅛.",
+    "note": "This specifies exactly where the first success occurs.",
+    "wrong": [
+      "The probability of one success anywhere in n trials."
+    ],
+    "aliases": [
+      "first success",
+      "bernoulli",
+      "geometric probability"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "sample-size",
+    "title": "Sample size",
+    "notation": "n = 30",
+    "parts": [
+      [
+        "n = 30",
+        "Thirty observations are in the sample."
+      ]
+    ],
+    "example": "If a school with 600 pupils surveys 30 of them, its sample size is n=30.",
+    "note": "A sample size is a count, and is distinct from the population size.",
+    "wrong": [
+      "The whole population has 30 members."
+    ],
+    "aliases": [
+      "sample size",
+      "n",
+      "population"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.4",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "random-sample",
+    "title": "Equal chance in a simple random sample",
+    "notation": "P(selected) = n/N",
+    "parts": [
+      [
+        "P(selected) = n/N",
+        "In a simple random sample of size n from N people, each person has this chance of inclusion."
+      ]
+    ],
+    "example": "Randomly choosing 10 distinct names from 100 gives each person inclusion probability 0.1.",
+    "note": "Equal inclusion chances do not guarantee any particular mix of people in one sample.",
+    "wrong": [
+      "The entire set of n names has probability n/N of being selected."
+    ],
+    "aliases": [
+      "random sample",
+      "selection",
+      "survey"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.5",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "interquartile-range",
+    "title": "Interquartile range",
+    "notation": "IQR = Q₃ − Q₁",
+    "parts": [
+      [
+        "IQR = Q₃ − Q₁",
+        "Subtract the lower quartile from the upper quartile."
+      ]
+    ],
+    "example": "If Q₁=6 and Q₃=14, the IQR is 8.",
+    "note": "IQR measures the spread of the middle half. The full range uses the minimum and maximum.",
+    "wrong": [
+      "Subtract the smallest observation from the largest."
+    ],
+    "aliases": [
+      "iqr",
+      "quartile",
+      "box plot"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.6",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "relative-frequency",
+    "title": "Relative frequency",
+    "notation": "f/n",
+    "parts": [
+      [
+        "f/n",
+        "The number in a category divided by the total number of observations."
+      ]
+    ],
+    "example": "If 12 of 40 responses are Yes, the relative frequency is 0.3.",
+    "note": "Frequency is a count. Relative frequency is a fraction or percentage.",
+    "wrong": [
+      "Divide the total sample size by the count in the category."
+    ],
+    "aliases": [
+      "frequency",
+      "frequency table",
+      "histogram"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.6",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "margin-of-error",
+    "title": "Margin of error for a proportion",
+    "notation": "1/√n",
+    "parts": [
+      [
+        "1/√n",
+        "The approximate maximum 95% margin of error for a sample proportion from a simple random sample."
+      ]
+    ],
+    "example": "For n=400 the margin is about 1/20=0.05, or five percentage points.",
+    "note": "It estimates sampling uncertainty. It cannot correct a biased sample.",
+    "wrong": [
+      "The proportion of all responses that were wrong."
+    ],
+    "aliases": [
+      "margin of error",
+      "moe"
+    ],
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.7",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  }
+]

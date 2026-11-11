@@ -1,0 +1,211 @@
+[
+  {
+    "id": "group-operation",
+    "title": "Group and operation",
+    "notation": "(G, ∗)",
+    "parts": [
+      [
+        "(G, ∗)",
+        "The group with underlying set G and operation ∗."
+      ]
+    ],
+    "example": "In (ℤ,+), the set is the integers and the operation is addition.",
+    "note": "The operation ∗ may be addition or composition.",
+    "wrong": [
+      "G is the group identity and ∗ is always multiplication.",
+      "G is the number of elements in the group."
+    ],
+    "aliases": [
+      "group",
+      "binary operation"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "group-identity",
+    "title": "Group identity",
+    "notation": "e ∗ g = g ∗ e = g",
+    "parts": [
+      [
+        "e ∗ g = g ∗ e",
+        "Combining e with g in either order"
+      ],
+      [
+        "= g",
+        "leaves g unchanged."
+      ]
+    ],
+    "example": "In the additive group of integers, e = 0.",
+    "note": "The identity depends on the operation. The additive identity is 0.",
+    "wrong": [
+      "e is an inverse for each g.",
+      "e is always Euler’s number."
+    ],
+    "aliases": [
+      "identity element",
+      "neutral element"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "group-inverse",
+    "title": "Group inverse",
+    "notation": "g ∗ g⁻¹ = e",
+    "parts": [
+      [
+        "g ∗ g⁻¹",
+        "Combining g with its inverse"
+      ],
+      [
+        "= e",
+        "gives the identity."
+      ]
+    ],
+    "example": "In (ℤ,+), the inverse of 5 is −5 because 5 + (−5) = 0.",
+    "note": "The superscript −1 refers to the group operation.",
+    "wrong": [
+      "The inverse of g is always the reciprocal 1/g.",
+      "Combining g with itself gives e in every group."
+    ],
+    "aliases": [
+      "inverse element",
+      "group inverse",
+      "g^-1"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "subgroup",
+    "title": "Subgroup",
+    "notation": "H ≤ G",
+    "parts": [
+      [
+        "H ≤ G",
+        "H is a subgroup of G."
+      ]
+    ],
+    "example": "The even integers under addition form a subgroup of the integers under addition.",
+    "note": "A subset must itself be a group under the same operation.",
+    "wrong": [
+      "H is a real number at most G.",
+      "Every subset H is a subgroup."
+    ],
+    "aliases": [
+      "subgroup",
+      "H<=G"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "normal-subgroup",
+    "title": "Normal subgroup",
+    "notation": "N ◁ G",
+    "parts": [
+      [
+        "N ◁ G",
+        "N is a normal subgroup of G."
+      ]
+    ],
+    "example": "The even integers form a normal subgroup of the additive integers, since the group is abelian.",
+    "note": "Normality means gNg⁻¹ = N for each g in G.",
+    "wrong": [
+      "N is any subset of G with fewer elements.",
+      "N is the inverse of G."
+    ],
+    "aliases": [
+      "normal subgroup",
+      "triangle left"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "left-coset",
+    "title": "Left coset",
+    "notation": "gH",
+    "parts": [
+      [
+        "gH",
+        "The set of all products gh with h in the subgroup H."
+      ]
+    ],
+    "example": "In additive ℤ, 1 + 2ℤ is the coset of all odd integers.",
+    "note": "A coset need not contain the identity.",
+    "wrong": [
+      "The subgroup containing only the element g.",
+      "The result of multiplying g by the size of H."
+    ],
+    "aliases": [
+      "coset",
+      "left coset"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "quotient-group",
+    "title": "Quotient group",
+    "notation": "G/N",
+    "parts": [
+      [
+        "G/N",
+        "The group whose elements are cosets of the normal subgroup N."
+      ]
+    ],
+    "example": "ℤ/2ℤ has two cosets, even and odd, with addition modulo 2.",
+    "note": "Normality makes the coset operation well defined.",
+    "wrong": [
+      "The set remaining after deleting N from G.",
+      "The ratio of the sizes of the sets, treated as a group element."
+    ],
+    "aliases": [
+      "quotient group",
+      "quotient"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "group-homomorphism",
+    "title": "Group homomorphism",
+    "notation": "φ(ab) = φ(a)φ(b)",
+    "parts": [
+      [
+        "φ(ab) = φ(a)φ(b)",
+        "Applying φ to a product gives the product of the images."
+      ]
+    ],
+    "example": "The map φ(n) = 2n on additive integers satisfies φ(a+b) = φ(a)+φ(b).",
+    "note": "A homomorphism preserves the operation. It need not be one-to-one.",
+    "wrong": [
+      "φ must map every element to itself.",
+      "φ must be a bijection."
+    ],
+    "aliases": [
+      "homomorphism",
+      "phi",
+      "operation preserving"
+    ],
+    "uni": "abstract-algebra"
+  },
+  {
+    "id": "polynomial-ring",
+    "title": "Polynomial ring",
+    "notation": "R[x]",
+    "parts": [
+      [
+        "R[x]",
+        "The ring of polynomials in x with coefficients in R."
+      ]
+    ],
+    "example": "2x² − 3 belongs to ℤ[x].",
+    "note": "Elements have finitely many terms and non-negative integer exponents.",
+    "wrong": [
+      "The value of the function R at input x.",
+      "All rational functions with coefficients in R."
+    ],
+    "aliases": [
+      "polynomial ring",
+      "ring",
+      "coefficients"
+    ],
+    "uni": "abstract-algebra"
+  }
+]

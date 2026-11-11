@@ -1,0 +1,602 @@
+[
+  {
+    "id": "binary-relation",
+    "title": "Binary relation",
+    "notation": "R ⊆ S × S",
+    "parts": [
+      [
+        "R",
+        "The relation R"
+      ],
+      [
+        "⊆",
+        "is a set of some (possibly all) of the"
+      ],
+      [
+        "S × S",
+        "ordered pairs of elements of S."
+      ]
+    ],
+    "example": "For S = {1, 2}, “≤” gives R = {(1,1), (1,2), (2,2)}.",
+    "note": "A binary relation on S can be represented as pairs or as directed edges.",
+    "wrong": [
+      "R must include every possible ordered pair.",
+      "R contains only individual elements of S.",
+      "R is a number equal to the size of S squared."
+    ],
+    "aliases": [
+      "binary relation",
+      "relation"
+    ],
+    "legacyId": 20,
+    "uni": "discrete"
+  },
+  {
+    "id": "ordered-pair-relation",
+    "title": "Membership in a relation",
+    "notation": "(x,y) ∈ R",
+    "parts": [
+      [
+        "(x,y)",
+        "The ordered pair (x,y)"
+      ],
+      [
+        "∈ R",
+        "belongs to the relation R."
+      ]
+    ],
+    "example": "If R is “less than”, then (2,5) ∈ R because 2 < 5.",
+    "note": "Order matters: (5,2) need not belong to the same relation.",
+    "wrong": [
+      "The pair (y,x) must also belong to R.",
+      "x equals y.",
+      "Neither x nor y can be related."
+    ],
+    "aliases": [
+      "ordered pair",
+      "relation pair"
+    ],
+    "legacyId": 21,
+    "uni": "discrete"
+  },
+  {
+    "id": "factorial",
+    "title": "Factorial",
+    "notation": "n!",
+    "parts": [
+      [
+        "n!",
+        "Multiply all the positive integers from 1 through n."
+      ]
+    ],
+    "example": "4! = 4 × 3 × 2 × 1 = 24. By definition, 0! = 1.",
+    "note": "For non-negative integers, n! counts the orderings of n distinct objects. The empty product gives 0! = 1.",
+    "wrong": [
+      "Multiply n by itself n times.",
+      "Add all integers from 1 through n.",
+      "Multiply n by 2."
+    ],
+    "aliases": [
+      "!",
+      "factorial",
+      "permutation"
+    ],
+    "legacyId": 29,
+    "uni": "discrete",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "graph-vertices-edges",
+    "title": "Graph, vertices and edges",
+    "notation": "G = (V, E)",
+    "parts": [
+      [
+        "G",
+        "The graph G"
+      ],
+      [
+        "= (V,",
+        "consists of a set of vertices V"
+      ],
+      [
+        "E)",
+        "and a set of edges E."
+      ]
+    ],
+    "example": "V = {a,b,c}, E = {{a,b}, {b,c}} describes an undirected path.",
+    "note": "Directed edges are ordered pairs. Undirected edges can be written as two-element sets.",
+    "wrong": [
+      "G is the product of V and E.",
+      "V is the edge set and E is the vertex set.",
+      "G has exactly two vertices."
+    ],
+    "aliases": [
+      "graph",
+      "vertices",
+      "edges"
+    ],
+    "legacyId": 31,
+    "uni": "discrete"
+  },
+  {
+    "id": "vertex-degree",
+    "title": "Vertex degree",
+    "notation": "deg(v)",
+    "parts": [
+      [
+        "deg(v)",
+        "The degree of vertex v, counting each incident end of an edge."
+      ]
+    ],
+    "example": "If a is connected to b, c and d in a simple undirected graph, deg(a) = 3.",
+    "note": "In directed graphs distinguish in-degree from out-degree. An undirected loop counts twice.",
+    "wrong": [
+      "The distance from v to every vertex.",
+      "The total number of vertices in the graph.",
+      "The discovery time of v in DFS."
+    ],
+    "aliases": [
+      "deg",
+      "degree",
+      "incident edges"
+    ],
+    "legacyId": 32,
+    "uni": "discrete"
+  },
+  {
+    "id": "shortest-path-distance",
+    "title": "Shortest path distance",
+    "notation": "dist(s, v)",
+    "parts": [
+      [
+        "dist",
+        "The length of a shortest path"
+      ],
+      [
+        "(s,",
+        "starting at s"
+      ],
+      [
+        "v)",
+        "and ending at v."
+      ]
+    ],
+    "example": "In an unweighted graph, the path s → a → v has length 2.",
+    "note": "BFS finds these distances in unweighted graphs. Unreachable vertices are often assigned ∞.",
+    "wrong": [
+      "The length of the longest path from s to v.",
+      "The number of all possible paths from s to v.",
+      "The number of neighbours of v."
+    ],
+    "aliases": [
+      "dist",
+      "distance",
+      "shortest path"
+    ],
+    "legacyId": 33,
+    "uni": "discrete"
+  },
+  {
+    "id": "eccentricity",
+    "title": "Graph eccentricity",
+    "notation": "ecc(v) = max_{u ∈ V} dist(v,u)",
+    "parts": [
+      [
+        "ecc(v)",
+        "The eccentricity of v"
+      ],
+      [
+        "= max_{u ∈ V}",
+        "is the greatest, over all vertices u in V, of"
+      ],
+      [
+        "dist(v,u)",
+        "the shortest-path distance from v to u."
+      ]
+    ],
+    "example": "If BFS distances from v are 0, 1, 1, 2, 3, then ecc(v) = 3.",
+    "note": "Take shortest-path distances first, then choose the largest. A distance to an unreachable vertex may be ∞.",
+    "wrong": [
+      "The smallest distance from v to any vertex.",
+      "The sum of the distances from v.",
+      "The number of edges touching v."
+    ],
+    "aliases": [
+      "ecc",
+      "eccentricity"
+    ],
+    "legacyId": 34,
+    "uni": "discrete"
+  },
+  {
+    "id": "dfs-timestamps",
+    "title": "Depth-first search timestamps",
+    "notation": "d[u] < d[v] < f[v] < f[u]",
+    "parts": [
+      [
+        "d[u] < d[v]",
+        "DFS discovers u before v"
+      ],
+      [
+        "< f[v]",
+        "then finishes v"
+      ],
+      [
+        "< f[u]",
+        "then finishes u."
+      ]
+    ],
+    "example": "u starts at time 1, v starts at 2, v finishes at 5, u finishes at 8.",
+    "note": "These nested intervals mean v is a descendant of u in the DFS forest.",
+    "wrong": [
+      "v finishes after u finishes.",
+      "u and v are in disjoint DFS subtrees.",
+      "v is discovered before u."
+    ],
+    "aliases": [
+      "dfs",
+      "discovery time",
+      "finish time"
+    ],
+    "legacyId": 35,
+    "uni": "discrete"
+  },
+  {
+    "id": "big-o",
+    "title": "Big O upper bound",
+    "notation": "T(n) ∈ O(n²)",
+    "parts": [
+      [
+        "T(n)",
+        "The running time T(n)"
+      ],
+      [
+        "∈ O",
+        "has an asymptotic upper bound"
+      ],
+      [
+        "(n²)",
+        "of a constant multiple of n squared."
+      ]
+    ],
+    "example": "3n² + 10n + 5 is O(n²). A linear function is also O(n²).",
+    "note": "Big-O is an upper bound, not necessarily an exact growth rate or a synonym for worst case.",
+    "wrong": [
+      "The running time is exactly n squared for every n.",
+      "The running time has a lower bound of n squared.",
+      "The running time must grow strictly faster than n squared."
+    ],
+    "aliases": [
+      "big o",
+      "O(n^2)",
+      "complexity"
+    ],
+    "legacyId": 36,
+    "uni": "discrete"
+  },
+  {
+    "id": "big-theta",
+    "title": "Big theta tight bound",
+    "notation": "T(n) ∈ Θ(n)",
+    "parts": [
+      [
+        "T(n)",
+        "The running time T(n)"
+      ],
+      [
+        "∈ Θ",
+        "is bounded above and below by positive constant multiples"
+      ],
+      [
+        "(n)",
+        "of n, for sufficiently large n."
+      ]
+    ],
+    "example": "3n + 7 is Θ(n): linear growth.",
+    "note": "Theta is a tight asymptotic bound.",
+    "wrong": [
+      "T(n) is exactly n for every n.",
+      "T(n) has only an upper bound proportional to n.",
+      "T(n) must be quadratic."
+    ],
+    "aliases": [
+      "big theta",
+      "Θ",
+      "complexity"
+    ],
+    "legacyId": 37,
+    "uni": "discrete"
+  },
+  {
+    "id": "big-omega",
+    "title": "Big omega lower bound",
+    "notation": "T(n) ∈ Ω(n)",
+    "parts": [
+      [
+        "T(n)",
+        "The running time T(n)"
+      ],
+      [
+        "∈ Ω",
+        "has an asymptotic lower bound"
+      ],
+      [
+        "(n)",
+        "of a positive constant multiple of n."
+      ]
+    ],
+    "example": "n² is Ω(n), as is 3n + 1.",
+    "note": "Omega describes a lower bound; it does not automatically mean best case.",
+    "wrong": [
+      "T(n) has an upper bound proportional to n.",
+      "T(n) is always exactly n.",
+      "T(n) grows more slowly than every linear function."
+    ],
+    "aliases": [
+      "big omega",
+      "Ω",
+      "complexity"
+    ],
+    "legacyId": 38,
+    "uni": "discrete"
+  },
+  {
+    "id": "little-o",
+    "title": "Little o",
+    "notation": "f(n) ∈ o(g(n))",
+    "parts": [
+      [
+        "f(n)",
+        "The function f(n)"
+      ],
+      [
+        "∈ o",
+        "grows strictly more slowly, asymptotically, than"
+      ],
+      [
+        "g(n)",
+        "g(n)."
+      ]
+    ],
+    "example": "n ∈ o(n²) because n/n² → 0 as n grows.",
+    "note": "Little-o is stricter than Big-O. n is O(n), but not o(n).",
+    "wrong": [
+      "f and g have exactly the same asymptotic order.",
+      "f grows strictly faster than g.",
+      "f is equal to g for every n."
+    ],
+    "aliases": [
+      "little o",
+      "strict asymptotic bound"
+    ],
+    "legacyId": 39,
+    "uni": "discrete"
+  },
+  {
+    "id": "linear-graph-time",
+    "title": "Linear time on a graph",
+    "notation": "O(|V| + |E|)",
+    "parts": [
+      [
+        "O",
+        "An asymptotic upper bound proportional to"
+      ],
+      [
+        "(|V|",
+        "the number of vertices"
+      ],
+      [
+        "+ |E|)",
+        "plus the number of edges."
+      ]
+    ],
+    "example": "BFS with adjacency lists runs in O(|V| + |E|).",
+    "note": "The vertical bars count elements. This bound depends on the representation and algorithm.",
+    "wrong": [
+      "The number of vertices multiplied by the number of edges.",
+      "The number of vertices squared.",
+      "The exact time in seconds of BFS."
+    ],
+    "aliases": [
+      "graph complexity",
+      "O(V+E)"
+    ],
+    "legacyId": 40,
+    "uni": "discrete"
+  },
+  {
+    "id": "astar-evaluation",
+    "title": "A* evaluation function",
+    "notation": "f(n) = g(n) + h(n)",
+    "parts": [
+      [
+        "f(n)",
+        "The A* evaluation score for node n"
+      ],
+      [
+        "= g(n)",
+        "is the cost already paid to reach n"
+      ],
+      [
+        "+ h(n)",
+        "plus the estimated remaining cost to a goal."
+      ]
+    ],
+    "example": "If g(n) = 7 and h(n) = 4, then f(n) = 11.",
+    "note": "Here n is a search node, not the input size used in Big-O.",
+    "wrong": [
+      "The cost to reach n minus the remaining estimate.",
+      "Only the estimated remaining cost.",
+      "Only the cost already paid."
+    ],
+    "aliases": [
+      "A*",
+      "astar",
+      "f=g+h"
+    ],
+    "legacyId": 41,
+    "uni": "discrete"
+  },
+  {
+    "id": "admissible-heuristic",
+    "title": "Admissible heuristic",
+    "notation": "h(n) ≤ h*(n)",
+    "parts": [
+      [
+        "h(n)",
+        "The estimated remaining cost from n"
+      ],
+      [
+        "≤",
+        "does not exceed"
+      ],
+      [
+        "h*(n)",
+        "the true cheapest remaining cost."
+      ]
+    ],
+    "example": "A heuristic of 4 is admissible when the true remaining cost is 6.",
+    "note": "h* uses a star to denote the true optimal cost here. This is the admissibility condition.",
+    "wrong": [
+      "The heuristic always overestimates the true remaining cost.",
+      "The heuristic must equal the true cost.",
+      "The heuristic is the cost already paid."
+    ],
+    "aliases": [
+      "admissible",
+      "heuristic"
+    ],
+    "legacyId": 42,
+    "uni": "discrete"
+  },
+  {
+    "id": "branching-factor",
+    "title": "Branching factor and depth",
+    "notation": "O(bᵈ)",
+    "parts": [
+      [
+        "O",
+        "An asymptotic upper bound proportional to"
+      ],
+      [
+        "(b",
+        "the branching factor b"
+      ],
+      [
+        "ᵈ)",
+        "raised to the solution depth d."
+      ]
+    ],
+    "example": "With branching factor 3 and depth 4, bᵈ = 81.",
+    "note": "This is a common search-tree bound; exact bounds depend on when goals are tested and nodes are generated.",
+    "wrong": [
+      "The branching factor multiplied by the depth.",
+      "The depth raised to the branching factor.",
+      "The branching factor plus the depth."
+    ],
+    "aliases": [
+      "branching factor",
+      "search depth"
+    ],
+    "legacyId": 43,
+    "uni": "discrete"
+  },
+  {
+    "id": "kleene-star",
+    "title": "Kleene star",
+    "notation": "w ∈ Σ*",
+    "parts": [
+      [
+        "w",
+        "The string w"
+      ],
+      [
+        "∈",
+        "belongs to"
+      ],
+      [
+        "Σ*",
+        "the set of all finite strings over the alphabet Σ, including the empty string."
+      ]
+    ],
+    "example": "If Σ = {0,1}, then ε, 0, 10 and 110 belong to Σ*.",
+    "note": "The star is Kleene star here. It does not mean multiplication or an optimal cost.",
+    "wrong": [
+      "w is exactly one symbol of Σ.",
+      "w must be an infinite string.",
+      "w must contain every symbol of Σ exactly once."
+    ],
+    "aliases": [
+      "kleene star",
+      "Σ*",
+      "alphabet"
+    ],
+    "legacyId": 48,
+    "uni": "discrete"
+  },
+  {
+    "id": "language-accepted",
+    "title": "Language accepted by a machine",
+    "notation": "L(M)",
+    "parts": [
+      [
+        "L(M)",
+        "The language consisting of all strings accepted by machine M."
+      ]
+    ],
+    "example": "If M accepts exactly the binary strings ending in 1, then 01 ∈ L(M).",
+    "note": "For a Turing machine, strings outside L(M) may be rejected or may run forever.",
+    "wrong": [
+      "All strings on which M halts, including rejected strings.",
+      "The number of states in M.",
+      "The set of strings M rejects."
+    ],
+    "aliases": [
+      "accepted language",
+      "L(M)"
+    ],
+    "legacyId": 49,
+    "uni": "discrete"
+  },
+  {
+    "id": "dfa-transition",
+    "title": "DFA transition",
+    "notation": "δ(q, a) = r",
+    "parts": [
+      [
+        "δ",
+        "The transition function"
+      ],
+      [
+        "(q, a)",
+        "given current state q and input symbol a"
+      ],
+      [
+        "= r",
+        "returns the next state r."
+      ]
+    ],
+    "example": "In a DFA, reading a in state q moves the machine to state r.",
+    "note": "This notation is for a DFA. An NFA transition can return a set of states.",
+    "wrong": [
+      "q is the input symbol and a is the next state.",
+      "Every state moves to r without reading input.",
+      "The machine accepts all strings ending in r."
+    ],
+    "aliases": [
+      "δ",
+      "transition",
+      "delta",
+      "dfa"
+    ],
+    "legacyId": 50,
+    "uni": "discrete"
+  }
+]

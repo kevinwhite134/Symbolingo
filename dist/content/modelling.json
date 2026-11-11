@@ -1,0 +1,207 @@
+[
+  {
+    "id": "model-rate",
+    "title": "Average rate of change",
+    "notation": "Δs/Δt",
+    "parts": [
+      [
+        "Δs/Δt",
+        "The change in position divided by elapsed time."
+      ]
+    ],
+    "example": "Moving from 2 m to 8 m in 3 s gives an average velocity of 2 m/s.",
+    "note": "Change is final value minus initial value.",
+    "wrong": [
+      "The elapsed time divided by the change in position."
+    ],
+    "aliases": [
+      "delta",
+      "average rate",
+      "velocity"
+    ],
+    "uni": "modelling",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "dimensional-analysis",
+    "title": "Dimensions of velocity",
+    "notation": "[v] = LT⁻¹",
+    "parts": [
+      [
+        "[v] = LT⁻¹",
+        "Velocity has dimensions of length divided by time."
+      ]
+    ],
+    "example": "Both m/s and km/h have dimensions LT⁻¹.",
+    "note": "The brackets describe dimensions, and L and T stand for length and time.",
+    "wrong": [
+      "Velocity must be measured in metres per second."
+    ],
+    "aliases": [
+      "dimensions",
+      "units",
+      "dimensional analysis"
+    ],
+    "uni": "modelling"
+  },
+  {
+    "id": "newton-second-law",
+    "title": "Newton’s second law",
+    "notation": "ΣF = ma",
+    "parts": [
+      [
+        "ΣF",
+        "The net force on a constant-mass object"
+      ],
+      [
+        "= ma",
+        "equals mass times acceleration."
+      ]
+    ],
+    "example": "A net force of 12 N on 3 kg gives an acceleration of 4 m/s².",
+    "note": "Add the forces as vectors before relating them to acceleration.",
+    "wrong": [
+      "The net force equals mass times velocity."
+    ],
+    "aliases": [
+      "force",
+      "acceleration",
+      "F=ma",
+      "mechanics"
+    ],
+    "uni": "modelling"
+  },
+  {
+    "id": "linear-model",
+    "title": "Linear model with an error term",
+    "notation": "yᵢ = β₀ + β₁xᵢ + εᵢ",
+    "parts": [
+      [
+        "yᵢ = β₀ + β₁xᵢ + εᵢ",
+        "Observation i is modelled as an intercept plus slope times input plus an error term."
+      ]
+    ],
+    "example": "With β₀=3 and β₁=2, input 4 gives a fitted mean of 11. An observed 10 has a residual of −1.",
+    "note": "β₀ is the model mean at x=0.",
+    "wrong": [
+      "β₁ is the prediction when x is zero."
+    ],
+    "aliases": [
+      "linear model",
+      "regression",
+      "beta"
+    ],
+    "uni": "modelling"
+  },
+  {
+    "id": "exponential-model",
+    "title": "Exponential model",
+    "notation": "P(t) = P₀aᵗ",
+    "parts": [
+      [
+        "P(t) = P₀aᵗ",
+        "Start at P₀ and multiply by a for each unit increase in t."
+      ]
+    ],
+    "example": "With P₀=200 and a=1.05, P(1)=210 and P(2)=220.5.",
+    "note": "A fixed multiplier gives a fixed percentage change per unit.",
+    "wrong": [
+      "Add a to P₀ at every time step."
+    ],
+    "aliases": [
+      "exponential",
+      "growth",
+      "decay"
+    ],
+    "uni": "modelling",
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "direct-proportion",
+    "title": "Direct proportionality",
+    "notation": "y ∝ x",
+    "parts": [
+      [
+        "y ∝ x",
+        "y is a fixed multiple of x."
+      ]
+    ],
+    "example": "If y=3x, doubling x doubles y.",
+    "note": "Adding a nonzero intercept breaks direct proportionality.",
+    "wrong": [
+      "y is proportional to the reciprocal of x."
+    ],
+    "aliases": [
+      "proportional",
+      "propto",
+      "direct proportion"
+    ],
+    "uni": "modelling",
+    "lc": {
+      "topic": "lc-algebra",
+      "section": "4.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "mass-balance",
+    "title": "Rate balance",
+    "notation": "dM/dt = Rᵢₙ − Rₒᵤₜ",
+    "parts": [
+      [
+        "dM/dt = Rᵢₙ − Rₒᵤₜ",
+        "The rate of change of stored mass is inflow rate minus outflow rate."
+      ]
+    ],
+    "example": "If 7 kg/h enters and 4 kg/h leaves, mass rises at 3 kg/h.",
+    "note": "Both right-hand terms are rates with the same units.",
+    "wrong": [
+      "Stored mass equals the sum of the two rates."
+    ],
+    "aliases": [
+      "mass balance",
+      "conservation",
+      "flow"
+    ],
+    "uni": "modelling"
+  },
+  {
+    "id": "dimensionless-number",
+    "title": "Reynolds number",
+    "notation": "Re = ρUL/μ",
+    "parts": [
+      [
+        "Re = ρUL/μ",
+        "Density times characteristic speed times length divided by dynamic viscosity."
+      ]
+    ],
+    "example": "For 1000 kg/m³, 0.1 m/s, 0.01 m and 0.001 Pa·s respectively, Re=1000.",
+    "note": "The units cancel. The result depends on the chosen characteristic speed and length.",
+    "wrong": [
+      "The result is measured in metres per second."
+    ],
+    "aliases": [
+      "reynolds",
+      "dimensionless",
+      "fluid mechanics"
+    ],
+    "uni": "modelling"
+  }
+]

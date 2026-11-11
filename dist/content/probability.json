@@ -1,0 +1,286 @@
+[
+  {
+    "id": "conditional-probability",
+    "title": "Conditional probability",
+    "notation": "P(A | B)",
+    "parts": [
+      [
+        "P",
+        "The probability"
+      ],
+      [
+        "(A",
+        "that A happens"
+      ],
+      [
+        "| B)",
+        "given that B has happened."
+      ]
+    ],
+    "example": "For a fair die: P(even | greater than 3) = 2/3, since {4,5,6} contains two even outcomes.",
+    "note": "The vertical bar means “given”, not division or absolute value. Assume P(B) > 0.",
+    "wrong": [
+      "The probability that either A or B happens.",
+      "The probability of B given A.",
+      "The probability of A multiplied by the probability of B."
+    ],
+    "aliases": [
+      "conditional",
+      "given",
+      "P(A given B)"
+    ],
+    "legacyId": 44,
+    "uni": "probability",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "joint-probability",
+    "title": "Joint probability",
+    "notation": "P(A ∩ B)",
+    "parts": [
+      [
+        "P",
+        "The probability"
+      ],
+      [
+        "(A",
+        "that A happens"
+      ],
+      [
+        "∩ B)",
+        "and B happens."
+      ]
+    ],
+    "example": "On a fair die, “even AND greater than 3” gives {4,6}, so the probability is 2/6.",
+    "note": "Do not automatically multiply P(A)P(B); that requires independence.",
+    "wrong": [
+      "The probability that at least one of A or B happens.",
+      "The probability of A given B.",
+      "The probability that neither event happens."
+    ],
+    "aliases": [
+      "joint probability",
+      "both events"
+    ],
+    "legacyId": 45,
+    "uni": "probability",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "random-variable-law",
+    "title": "Distribution of a random variable",
+    "notation": "X ∼ Poisson(λ)",
+    "parts": [
+      [
+        "X ∼ Poisson(λ)",
+        "The count X follows a Poisson distribution with parameter λ."
+      ]
+    ],
+    "example": "If X∼Poisson(2), then P(X=0)=e⁻².",
+    "note": "The tilde states a probability law.",
+    "wrong": [
+      "X always equals λ."
+    ],
+    "aliases": [
+      "poisson",
+      "distributed as",
+      "tilde"
+    ],
+    "uni": "probability"
+  },
+  {
+    "id": "expected-value",
+    "title": "Expected value",
+    "notation": "E[X]",
+    "parts": [
+      [
+        "E[X]",
+        "The probability-weighted mean value of X."
+      ]
+    ],
+    "example": "A fair six-sided die has mean (1+2+3+4+5+6)/6=3.5.",
+    "note": "An expectation can be a value that X cannot take.",
+    "wrong": [
+      "The most likely single value of X."
+    ],
+    "aliases": [
+      "expectation",
+      "mean",
+      "expected value",
+      "E(X)"
+    ],
+    "uni": "probability",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "variance",
+    "title": "Variance",
+    "notation": "Var(X)",
+    "parts": [
+      [
+        "Var(X)",
+        "The expected squared deviation from the mean of X."
+      ]
+    ],
+    "example": "If X is 0 or 2 with equal probability, its mean is 1 and Var(X)=1.",
+    "note": "Squaring deviations stops positive and negative values cancelling.",
+    "wrong": [
+      "The mean of the unsquared deviations."
+    ],
+    "aliases": [
+      "variance",
+      "var"
+    ],
+    "uni": "probability"
+  },
+  {
+    "id": "cdf",
+    "title": "Cumulative distribution function",
+    "notation": "F_X(x) = P(X ≤ x)",
+    "parts": [
+      [
+        "F_X(x) = P(X ≤ x)",
+        "The probability that X takes a value at most x."
+      ]
+    ],
+    "example": "On a fair die, the cumulative probability at 3 is 3/6=0.5.",
+    "note": "For a discrete variable, the probability at x is included.",
+    "wrong": [
+      "The probability X equals x exactly."
+    ],
+    "aliases": [
+      "cdf",
+      "cumulative distribution"
+    ],
+    "uni": "probability"
+  },
+  {
+    "id": "binomial",
+    "title": "Binomial distribution",
+    "notation": "X ∼ Bin(n,p)",
+    "parts": [
+      [
+        "X ∼ Bin(n,p)",
+        "X counts successes in n independent trials with the same success probability p."
+      ]
+    ],
+    "example": "For two fair coin tosses, X∼Bin(2,0.5) and P(X=2)=0.25.",
+    "note": "X counts successes rather than recording the trial number of the first success.",
+    "wrong": [
+      "X records which trial first succeeds."
+    ],
+    "aliases": [
+      "binomial",
+      "bernoulli",
+      "bin"
+    ],
+    "uni": "probability",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.3",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "independent-events",
+    "title": "Independent events",
+    "notation": "P(A ∩ B) = P(A)P(B)",
+    "parts": [
+      [
+        "P(A ∩ B)",
+        "The chance both independent events happen"
+      ],
+      [
+        "= P(A)P(B)",
+        "equals the product of their probabilities."
+      ]
+    ],
+    "example": "Two independent fair tosses are both heads with chance ½×½=¼.",
+    "note": "Independent events with positive probabilities cannot be mutually exclusive.",
+    "wrong": [
+      "Add the two individual probabilities."
+    ],
+    "aliases": [
+      "independence",
+      "independent events"
+    ],
+    "uni": "probability",
+    "lc": {
+      "topic": "lc-statistics",
+      "section": "1.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "markov-transition",
+    "title": "Markov transition probability",
+    "notation": "pᵢⱼ = P(Xₜ₊₁ = j ∣ Xₜ = i)",
+    "parts": [
+      [
+        "pᵢⱼ = P(Xₜ₊₁ = j ∣ Xₜ = i)",
+        "The probability of going from i to j in one step of a time-homogeneous Markov chain."
+      ]
+    ],
+    "example": "If rain follows a sunny day 30% of the time, pₛᵣ=0.3 in a two-state model.",
+    "note": "The current state is after the bar and the next state is before it.",
+    "wrong": [
+      "The probability of going from j to i in one step."
+    ],
+    "aliases": [
+      "markov",
+      "transition matrix",
+      "stochastic process"
+    ],
+    "uni": "probability"
+  },
+  {
+    "id": "bayes-rule",
+    "title": "Bayes’ rule",
+    "notation": "P(A ∣ B) = P(B ∣ A)P(A)/P(B)",
+    "parts": [
+      [
+        "P(A ∣ B)",
+        "The chance of A given B"
+      ],
+      [
+        "= P(B ∣ A)P(A)/P(B)",
+        "is the reverse conditional times the prior divided by the chance of B."
+      ]
+    ],
+    "example": "If P(A)=0.2, P(B∣A)=0.5 and P(B)=0.25, then P(A∣B)=0.4.",
+    "note": "Swapping the event and condition generally changes the probability.",
+    "wrong": [
+      "P(A given B) always equals P(B given A)."
+    ],
+    "aliases": [
+      "bayes",
+      "posterior"
+    ],
+    "uni": "probability"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "id": "newton-iteration",
+    "title": "Newton’s root iteration",
+    "notation": "xₖ₊₁ = xₖ − f(xₖ)/f′(xₖ)",
+    "parts": [
+      [
+        "xₖ₊₁ = xₖ − f(xₖ)/f′(xₖ)",
+        "Subtract the function-to-derivative ratio from the current root estimate to get the next estimate."
+      ]
+    ],
+    "example": "For f(x)=x²−2 and x₀=1, the next estimate is 1−(−1)/2=1.5.",
+    "note": "The step requires a nonzero derivative and does not guarantee convergence.",
+    "wrong": [
+      "Subtract the derivative divided by the function."
+    ],
+    "aliases": [
+      "newton raphson",
+      "numerical root"
+    ],
+    "uni": "numerical"
+  },
+  {
+    "id": "finite-difference",
+    "title": "Forward finite difference",
+    "notation": "(f(x+h) − f(x))/h",
+    "parts": [
+      [
+        "(f(x+h) − f(x))/h",
+        "The change in f over a step of length h divided by h."
+      ]
+    ],
+    "example": "For f(x)=x² at x=2 with h=0.1, the difference is (4.41−4)/0.1=4.1.",
+    "note": "At a fixed nonzero h, this can approximate f′(x).",
+    "wrong": [
+      "Average the two function values."
+    ],
+    "aliases": [
+      "finite difference",
+      "forward difference"
+    ],
+    "uni": "numerical"
+  },
+  {
+    "id": "trapezoidal-rule",
+    "title": "Trapezoidal rule",
+    "notation": "A ≈ h(y₀/2 + y₁ + ⋯ + yₙ₋₁ + yₙ/2)",
+    "parts": [
+      [
+        "A ≈ h(y₀/2 + y₁ + ⋯ + yₙ₋₁ + yₙ/2)",
+        "Approximate signed area with evenly spaced ordinates by giving half weight to both endpoints."
+      ]
+    ],
+    "example": "For heights 2,4,6 at spacing 1, the estimate is 1×(1+4+3)=8.",
+    "note": "Each endpoint belongs to one trapezoid, while interior ordinates belong to two.",
+    "wrong": [
+      "Multiply the spacing by the sum with all heights given full weight."
+    ],
+    "aliases": [
+      "trapezoidal",
+      "trapezium rule",
+      "numerical integration"
+    ],
+    "uni": "numerical",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.4",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "absolute-error",
+    "title": "Absolute error",
+    "notation": "|x̃ − x|",
+    "parts": [
+      [
+        "|x̃ − x|",
+        "The distance between an approximation x̃ and the exact value x."
+      ]
+    ],
+    "example": "Using 3.1 for 3.14 gives absolute error 0.04.",
+    "note": "Absolute error has the same units as the original quantity.",
+    "wrong": [
+      "The error divided by the magnitude of the exact value."
+    ],
+    "aliases": [
+      "absolute error",
+      "error bound"
+    ],
+    "uni": "numerical",
+    "lc": {
+      "topic": "lc-number",
+      "section": "3.3",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "argmin",
+    "title": "Minimising argument",
+    "notation": "x∗ ∈ argmin f(x)",
+    "parts": [
+      [
+        "x∗ ∈ argmin f(x)",
+        "The choice x∗ is an input at which f attains its minimum."
+      ]
+    ],
+    "example": "For f(x)=(x−2)², the minimising input is 2 and the minimum output is 0.",
+    "note": "Argmin finds an input, while min gives the output value.",
+    "wrong": [
+      "x∗ is the smallest output of f."
+    ],
+    "aliases": [
+      "argmin",
+      "optimiser",
+      "minimizer"
+    ],
+    "uni": "numerical"
+  },
+  {
+    "id": "gradient-descent",
+    "title": "Gradient descent step",
+    "notation": "xₖ₊₁ = xₖ − η∇f(xₖ)",
+    "parts": [
+      [
+        "xₖ₊₁ = xₖ − η∇f(xₖ)",
+        "Move from the current point against the gradient with step size η."
+      ]
+    ],
+    "example": "For f(x)=x², x₀=2 and η=0.1, the next point is 2−0.1×4=1.6.",
+    "note": "A step that is too large can still increase f.",
+    "wrong": [
+      "Move in the positive gradient direction."
+    ],
+    "aliases": [
+      "gradient descent",
+      "step size",
+      "learning rate"
+    ],
+    "uni": "numerical"
+  },
+  {
+    "id": "linear-constraint",
+    "title": "Linear inequality constraint",
+    "notation": "Ax ≤ b",
+    "parts": [
+      [
+        "Ax ≤ b",
+        "Every component of Ax is no greater than the corresponding component of b."
+      ]
+    ],
+    "example": "Rows (1,1) and (2,0) with b=(5,6) require x₁+x₂≤5 and 2x₁≤6.",
+    "note": "There is one inequality per row.",
+    "wrong": [
+      "Only the sums of the components are compared."
+    ],
+    "aliases": [
+      "linear programming",
+      "constraint",
+      "feasible set"
+    ],
+    "uni": "numerical"
+  },
+  {
+    "id": "residual",
+    "title": "Residual of a linear system",
+    "notation": "r = b − Ax̃",
+    "parts": [
+      [
+        "r = b − Ax̃",
+        "The residual is the required right-hand side minus the result from the approximate solution."
+      ]
+    ],
+    "example": "If A=2, b=7 and x̃=3, the residual is 7−6=1.",
+    "note": "The residual measures a mismatch in the equations.",
+    "wrong": [
+      "The residual is the true solution minus the approximate solution."
+    ],
+    "aliases": [
+      "residual",
+      "linear system",
+      "defect"
+    ],
+    "uni": "numerical"
+  }
+]

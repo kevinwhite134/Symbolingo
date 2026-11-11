@@ -1,0 +1,202 @@
+[
+  {
+    "id": "function-value",
+    "title": "Function value",
+    "notation": "f(3)",
+    "parts": [
+      [
+        "f(3)",
+        "The output of the function f at input 3."
+      ]
+    ],
+    "example": "If f(x)=x²+1, f(3)=9+1=10.",
+    "note": "The brackets give an input. They do not imply multiplication by 3.",
+    "wrong": [
+      "Multiply the function by three."
+    ],
+    "aliases": [
+      "function notation",
+      "function value",
+      "evaluate"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "function-root",
+    "title": "Root of a function",
+    "notation": "f(x) = 0",
+    "parts": [
+      [
+        "f(x) = 0",
+        "Find input values where the function has output zero."
+      ]
+    ],
+    "example": "If f(x)=x²−4, the roots are x=−2 and x=2.",
+    "note": "Roots are x-coordinates where the graph meets the horizontal axis.",
+    "wrong": [
+      "Find the value of f at the input x=0."
+    ],
+    "aliases": [
+      "root",
+      "zero",
+      "x intercept"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "function-intersection",
+    "title": "Intersection of two function graphs",
+    "notation": "f(x) = g(x)",
+    "parts": [
+      [
+        "f(x) = g(x)",
+        "Find inputs where both functions give the same output."
+      ]
+    ],
+    "example": "If f(x)=2x and g(x)=x+3, they meet when x=3 and the shared output is 6.",
+    "note": "Equality at a specific x does not make the functions identical.",
+    "wrong": [
+      "f and g have the same output at every input."
+    ],
+    "aliases": [
+      "intersection",
+      "functions",
+      "equate"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "inverse-function",
+    "title": "Inverse function",
+    "notation": "f⁻¹(y)",
+    "parts": [
+      [
+        "f⁻¹(y)",
+        "The unique input to the invertible function f that produces y."
+      ]
+    ],
+    "example": "If f(x)=2x+1, f⁻¹(7)=(7−1)/2=3.",
+    "note": "An inverse undoes the function. A reciprocal divides one by its value.",
+    "wrong": [
+      "Compute one divided by f(y)."
+    ],
+    "aliases": [
+      "inverse",
+      "inverse function",
+      "f^-1"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "completed-square",
+    "title": "Completed square form",
+    "notation": "f(x) = a(x−h)² + k",
+    "parts": [
+      [
+        "f(x) = a(x−h)² + k",
+        "The quadratic has its vertex at (h,k)."
+      ]
+    ],
+    "example": "f(x)=2(x−3)²−1 has its minimum at (3,−1).",
+    "note": "The sign of a determines whether the vertex is a minimum or maximum.",
+    "wrong": [
+      "The vertex is at (−h,−k)."
+    ],
+    "aliases": [
+      "completing the square",
+      "vertex",
+      "turning point"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.1",
+      "levels": [
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "stationary-point",
+    "title": "Stationary point",
+    "notation": "f′(a) = 0",
+    "parts": [
+      [
+        "f′(a) = 0",
+        "The tangent to f at input a has slope zero."
+      ]
+    ],
+    "example": "For f(x)=x², f′(0)=0 and the graph has a minimum there.",
+    "note": "A zero derivative can also occur without a local maximum or minimum, as for x³ at zero.",
+    "wrong": [
+      "The graph must cross the horizontal axis at x=a."
+    ],
+    "aliases": [
+      "stationary point",
+      "turning point",
+      "zero derivative"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "ordinary",
+        "higher"
+      ]
+    }
+  },
+  {
+    "id": "first-principles",
+    "title": "Derivative from first principles",
+    "notation": "f′(x) = limₕ→₀ (f(x+h)−f(x))/h",
+    "parts": [
+      [
+        "f′(x) = limₕ→₀ (f(x+h)−f(x))/h",
+        "The derivative is the limit of the average rate over a step h as that step approaches zero."
+      ]
+    ],
+    "example": "For f(x)=x², the ratio simplifies to 2x+h for h≠0, then approaches 2x.",
+    "note": "Simplify or take the limit. Directly setting h=0 in the original ratio gives 0/0.",
+    "wrong": [
+      "Set h=0 in the fraction before evaluating."
+    ],
+    "aliases": [
+      "first principles",
+      "difference quotient",
+      "derivative"
+    ],
+    "lc": {
+      "topic": "lc-functions",
+      "section": "5.2",
+      "levels": [
+        "higher"
+      ]
+    }
+  }
+]

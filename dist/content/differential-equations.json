@@ -1,0 +1,181 @@
+[
+  {
+    "id": "ode-prime",
+    "title": "Ordinary derivative in an equation",
+    "notation": "y′ = ky",
+    "parts": [
+      [
+        "y′ = ky",
+        "The derivative of y equals a constant k times y."
+      ]
+    ],
+    "example": "For k=2, y(t)=3e²ᵗ gives y′=2y.",
+    "note": "The equation relates a function to its derivative.",
+    "wrong": [
+      "The second derivative of y equals ky."
+    ],
+    "aliases": [
+      "ode",
+      "growth equation"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "initial-value",
+    "title": "Initial condition",
+    "notation": "y(0) = y₀",
+    "parts": [
+      [
+        "y(0) = y₀",
+        "At time zero the solution has value y₀."
+      ]
+    ],
+    "example": "For y′=2y and y(0)=3, y(t)=3e²ᵗ.",
+    "note": "The subscript marks a starting value. y₀ itself need not be zero.",
+    "wrong": [
+      "The derivative at time zero equals y₀."
+    ],
+    "aliases": [
+      "initial condition",
+      "initial value",
+      "ivp"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "boundary-values",
+    "title": "Boundary conditions",
+    "notation": "y(0) = 0, y(1) = 1",
+    "parts": [
+      [
+        "y(0) = 0",
+        "The solution is zero at the left endpoint"
+      ],
+      [
+        "y(1) = 1",
+        "and one at the right endpoint."
+      ]
+    ],
+    "example": "For y″=0, the two conditions select y(x)=x.",
+    "note": "Conditions at distinct endpoints are boundary conditions.",
+    "wrong": [
+      "The slope is zero at x=0 and one at x=1."
+    ],
+    "aliases": [
+      "boundary condition",
+      "bvp"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "equilibrium",
+    "title": "Equilibrium solution",
+    "notation": "f(y∗) = 0",
+    "parts": [
+      [
+        "f(y∗) = 0",
+        "The state y∗ makes the rate zero in the autonomous equation y′=f(y)."
+      ]
+    ],
+    "example": "For y′=y(1−y), equilibria are 0 and 1.",
+    "note": "An equilibrium is a constant solution and need not be stable.",
+    "wrong": [
+      "y∗ must be the largest possible value of y."
+    ],
+    "aliases": [
+      "equilibrium",
+      "steady state",
+      "fixed point"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "heat-equation",
+    "title": "Heat equation",
+    "notation": "∂u/∂t = κ ∂²u/∂x²",
+    "parts": [
+      [
+        "∂u/∂t",
+        "The rate of temperature change in time"
+      ],
+      [
+        "= κ ∂²u/∂x²",
+        "equals κ times the second derivative in space."
+      ]
+    ],
+    "example": "A constant temperature has zero spatial curvature and zero time derivative.",
+    "note": "Time has a first derivative and space has a second derivative.",
+    "wrong": [
+      "The spatial rate equals κ times the second time derivative."
+    ],
+    "aliases": [
+      "heat equation",
+      "diffusion",
+      "pde"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "separable",
+    "title": "Separation of variables",
+    "notation": "dy/g(y) = f(t) dt",
+    "parts": [
+      [
+        "dy/g(y) = f(t) dt",
+        "Where g(y) is nonzero, collect y terms on one side and t terms on the other before integrating."
+      ]
+    ],
+    "example": "For y′=2y and y>0, integrating dy/y=2 dt gives ln y=2t+C.",
+    "note": "Check constant solutions separately before dividing by g(y).",
+    "wrong": [
+      "Every differential equation can be written this way."
+    ],
+    "aliases": [
+      "separable",
+      "separation of variables"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "laplace-transform",
+    "title": "Laplace transform",
+    "notation": "ℒ{f}(s)",
+    "parts": [
+      [
+        "ℒ{f}(s)",
+        "The integral of e to the power −st times f(t) from t=0 to infinity, when it converges."
+      ]
+    ],
+    "example": "For f(t)=1, ℒ{f}(s)=1/s for real s>0.",
+    "note": "The transform gives a function of s.",
+    "wrong": [
+      "The integral of f from zero to s without weighting."
+    ],
+    "aliases": [
+      "laplace",
+      "laplace transform"
+    ],
+    "uni": "differential-equations"
+  },
+  {
+    "id": "characteristic-equation",
+    "title": "Characteristic equation of an ODE",
+    "notation": "r² + ar + b = 0",
+    "parts": [
+      [
+        "r² + ar + b = 0",
+        "The equation for exponential rates r in y″+ay′+by=0."
+      ]
+    ],
+    "example": "For y″−3y′+2y=0 the roots are 1 and 2, giving eᵗ and e²ᵗ.",
+    "note": "The roots give rates used to build solutions.",
+    "wrong": [
+      "This gives the initial values of y and y′."
+    ],
+    "aliases": [
+      "characteristic equation",
+      "auxiliary equation"
+    ],
+    "uni": "differential-equations"
+  }
+]

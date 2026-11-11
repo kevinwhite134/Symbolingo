@@ -1,3 +1,92 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f6f5f0"><meta name="description" content="Learn to read maths notation in plain English, one symbol at a time."><title>Notation Lab · Maths in plain English</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='20' fill='%23274839'/%3E%3Ctext x='19' y='57' font-size='53' fill='white'%3E∀%3C/text%3E%3C/svg%3E"><style>
-:root{--bg:#f6f5f0;--ink:#253d32;--muted:#748078;--line:#dfE3da;--green:#2e5843;--lime:#dceaa9;--paper:#fffefa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a4b86b;outline-offset:4px}header{height:84px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw}.brand{font-size:22px;font-weight:750;letter-spacing:-1px;display:flex;gap:12px;align-items:center}.mark{background:var(--ink);color:white;border-radius:11px;padding:5px 12px;font:29px Georgia}.tag{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:7px 12px;letter-spacing:1px}.shell{max-width:1260px;margin:auto;padding:44px 30px}.intro{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--muted);text-transform:uppercase}h1{font:clamp(35px,4vw,52px) Georgia,serif;letter-spacing:-1.8px;margin:12px 0}h1 em{color:#6d8460;font-weight:400}p{line-height:1.65}.intro p{color:var(--muted);margin:0}.streak{text-align:right;font-size:13px;color:var(--muted)}.streak strong{font:32px Georgia;color:var(--ink);display:block}.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:32px}aside{padding-top:5px}.label{font-size:10px;letter-spacing:1.7px;color:var(--muted);font-weight:700;margin:0 0 16px}.topics{display:flex;flex-direction:column;gap:5px}.topic{border:0;background:none;text-align:left;padding:12px;border-radius:8px;color:#647268;display:flex;justify-content:space-between;gap:5px}.topic.active{background:#e5eadc;color:var(--ink);font-weight:650}.count{font-size:11px;opacity:.65}.aside-note{border-top:1px solid var(--line);margin-top:26px;padding-top:21px;color:var(--muted);font-size:12px;line-height:1.7}.tabs{display:flex;border-bottom:1px solid var(--line);gap:26px;margin-bottom:23px}.tab{border:0;background:none;padding:5px 0 15px;color:var(--muted);font-size:14px;border-bottom:2px solid transparent}.tab.active{border-color:var(--green);color:var(--ink);font-weight:700}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.toolbar input{width:230px;background:transparent;border:1px solid var(--line);padding:10px 13px;border-radius:7px;color:var(--ink)}.mini{font-size:12px;color:var(--muted)}.card{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden}.card-head{padding:22px 27px;display:flex;justify-content:space-between;align-items:center}.pill{font-size:10px;letter-spacing:1px;text-transform:uppercase;background:#edf0e5;border-radius:5px;padding:7px 10px}.bookmark{background:none;border:1px solid var(--line);border-radius:6px;color:var(--muted);padding:7px 10px}.equation{padding:32px 18px 24px;text-align:center;font:clamp(28px,4vw,45px) Georgia,serif;min-height:120px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px}.token{font:inherit;border:0;border-radius:6px;background:none;padding:5px 3px;color:var(--ink);border-bottom:2px solid transparent}.token.selected{background:#e7eddb;border-bottom-color:#6a8754}.hint{text-align:center;font-size:11px;color:var(--muted);margin:0 0 26px}.translation{margin:0 28px 25px;padding:24px;background:#edf1e5;border-radius:10px;text-align:center}.translation .label{margin-bottom:10px;font-size:9px}.english{font:23px/1.5 Georgia;color:#334d3d}.chunk{cursor:pointer;border-radius:4px;padding:2px}.chunk.selected{background:#d1dfb9}.detail{margin:0 28px 27px;border-top:1px solid var(--line);padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.detail p{font-size:13px;margin:6px 0 0;color:#6a766d}.detail strong{font-size:12px}.callout{background:#f6f4ec;padding:14px;border-radius:7px}.bottom{display:flex;align-items:center;justify-content:space-between;margin-top:20px;gap:10px}.btn{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:12px 17px;color:var(--ink)}.btn.primary{background:var(--ink);border-color:var(--ink);color:white}.btn:hover{filter:brightness(.96)}.progress{height:4px;background:#e4e8dc;border-radius:4px;margin-top:23px;overflow:hidden}.progress div{height:100%;background:#83986a;transition:width .3s}.footnote{margin-top:20px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}.option{display:block;width:100%;padding:16px;text-align:left;border:1px solid var(--line);background:white;border-radius:9px;margin:9px 0;color:var(--ink);line-height:1.5}.option b{font-size:11px;color:var(--muted);padding-right:13px}.option.correct{background:#e5efd9;border-color:#7b9e61}.option.wrong{background:#fbece5;border-color:#cc967d}.options{padding:0 28px 20px}.feedback{padding:0 28px 24px;line-height:1.6;font-size:14px}.flash-cover{text-align:center;padding:18px 24px 40px;color:var(--muted)}.flash-cover .btn{margin-top:12px}.empty{padding:50px;text-align:center}.settings{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}select{border:1px solid var(--line);background:var(--paper);border-radius:6px;padding:7px;color:var(--ink)}.review{font-size:12px;display:flex;gap:6px;align-items:center}.summary{padding:36px;text-align:center}.summary h2{font:34px Georgia}.summary strong{font:60px Georgia;display:block;margin:20px}.key{border:1px solid var(--line);padding:2px 5px;border-radius:4px}.browse{margin-top:26px;display:flex;gap:7px;flex-wrap:wrap}.browse button{border:1px solid var(--line);background:none;border-radius:7px;padding:8px 11px;color:var(--muted);font:17px Georgia}.browse button.active{background:#e4ead8;color:var(--ink);border-color:#a8b891}footer{text-align:center;font-size:11px;color:#8c958b;padding:36px 20px}@media(max-width:760px){header{height:68px;padding:0 20px}.tag{font-size:9px}.brand{font-size:19px}.shell{padding:28px 18px}.intro{margin-bottom:26px;align-items:start}.intro p{font-size:13px;max-width:260px}.streak{font-size:10px;min-width:58px}.streak strong{font-size:26px}h1{font-size:36px}.layout{display:block}aside{margin-bottom:24px}.topics{flex-direction:row;overflow:auto;padding-bottom:5px}.topic{white-space:nowrap;border:1px solid var(--line);padding:10px 12px}.count{display:none}.aside-note,aside>.label{display:none}.tabs{gap:23px}.tab{font-size:13px}.toolbar input{width:160px}.toolbar{flex-wrap:wrap}.card-head{padding:18px}.equation{padding-top:25px;font-size:30px;gap:2px}.translation{margin:0 16px 20px;padding:20px 14px}.english{font-size:21px}.detail{margin:0 18px 21px;grid-template-columns:1fr;gap:15px}.options{padding:0 16px 15px}.feedback{padding:0 18px 20px}.bottom .btn{font-size:13px;padding:12px}.footnote{font-size:10px}.browse{margin-top:20px}.settings{font-size:11px}.review{font-size:11px}.intro .eyebrow{font-size:9px}footer{padding-bottom:calc(25px + env(safe-area-inset-bottom))}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body><header><div class="brand"><span class="mark">∀</span> notation lab<span style="color:#9ba48f">.</span></div><span class="tag">MATHS → PLAIN ENGLISH</span></header><div class="shell"><section class="intro"><div><div class="eyebrow">A little clarity, one symbol at a time</div><h1>Read maths. <em>Understand it.</em></h1><p>Your course notation, translated into words that make sense.</p></div><div class="streak"><strong id="learned">0</strong>cards practised</div></section><div class="layout"><aside><div class="label">YOUR TOPICS</div><div class="topics" id="topics"></div><div class="aside-note"><strong>Built around your CS course.</strong><br>From “what does log do?” to graphs, logic, AI search and formal foundations.<br><br>Start with the words. Then connect each word to its symbol.</div></aside><main><nav class="tabs" aria-label="Learning mode"><button class="tab active" data-mode="learn">Learn & explore</button><button class="tab" data-mode="quiz">Test yourself</button><button class="tab" data-mode="flash">Rapid fire</button></nav><div class="toolbar"><input id="search" type="search" placeholder="Find a symbol or idea…" aria-label="Search notation"><label class="review"><input id="savedOnly" type="checkbox"> Saved only</label><span class="mini" id="position"></span></div><div id="stage"></div><div id="browse" class="browse" aria-label="Choose a notation card"></div><div class="footnote"><span>Progress saved on this device</span><span><span class="key">←</span> <span class="key">→</span> navigate · <span class="key">space</span> reveal</span></div></main></div></div><footer>Less decoding. More understanding. &nbsp; Made for the way you learn.</footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="Look up, understand, and practise maths notation for the Irish Leaving Cert and university.">
+  <title>Symbolingo · Maths in plain English</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23274739'/%3E%3Ctext x='17' y='46' font-family='serif' font-size='43' fill='white'%3E∀%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <button type="button" class="brand" id="home" aria-label="Symbolingo home"><span class="mark" aria-hidden="true">∀</span>Symbolingo<span class="brand-dot">.</span></button>
+      <nav id="tracks" aria-label="Study track">
+        <button type="button" class="track" data-track="lc" aria-pressed="false">Leaving Cert</button>
+        <button type="button" class="track" data-track="uni" aria-pressed="false">University</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <section id="welcome" class="welcome" aria-labelledby="welcome-heading">
+      <div class="welcome-copy">
+        <h1 id="welcome-heading">Maths in<br><em>plain English.</em></h1>
+        <p>Look up a symbol, see it in context, and practise until it makes sense.</p>
+      </div>
+      <div class="track-choices">
+        <button type="button" class="choice" data-track="lc">
+          <span class="choice-symbol" aria-hidden="true">f(x)</span>
+          <span><strong>Leaving Cert</strong><small>Irish Ordinary and Higher Level maths</small></span>
+          <span aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="choice" data-track="uni">
+          <span class="choice-symbol" aria-hidden="true">∀x</span>
+          <span><strong>University</strong><small>Maths notation by branch, from proofs to modelling</small></span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+    <p id="load-error" role="alert" hidden></p>
+    <section id="workspace" hidden aria-labelledby="track-heading">
+      <div class="intro">
+        <div>
+          <h1 id="track-heading" tabindex="-1"></h1>
+          <p id="track-description"></p>
+        </div>
+        <dl class="stats" aria-label="Your progress">
+          <div><dt>Cards opened</dt><dd id="opened">0</dd></div>
+          <div><dt>Quiz accuracy</dt><dd id="accuracy">—</dd></div>
+        </dl>
+      </div>
+      <div class="layout">
+        <aside class="sidebar">
+          <div id="level-label">
+            <label for="level">Exam level</label>
+            <select id="level">
+              <option value="ordinary">Ordinary Level</option>
+              <option value="higher">Higher Level</option>
+            </select>
+          </div>
+          <label for="topic" id="topic-label">Topic</label>
+          <select id="topic"></select>
+          <p id="syllabus"><a href="https://ncca.ie/media/2122/lc-mathematics-syllabus.pdf">Leaving Cert Mathematics syllabus</a></p>
+        </aside>
+        <div class="learning">
+          <nav id="modes" aria-label="Learning mode">
+            <button type="button" data-mode="learn" aria-pressed="true">Learn</button>
+            <button type="button" data-mode="quiz" aria-pressed="false">Quiz</button>
+            <button type="button" data-mode="flash" aria-pressed="false">Rapid Fire</button>
+            <button type="button" data-mode="review" aria-pressed="false">Review <span id="due-count" hidden></span></button>
+          </nav>
+          <div id="filters" class="filters">
+            <label class="search-label" for="search">Find notation
+              <input id="search" type="search" placeholder="e.g. ∑, sigma, or absolute value" autocomplete="off">
+            </label>
+            <label class="check"><input type="checkbox" id="saved-only"> Saved only</label>
+          </div>
+          <p id="notice" role="status" class="notice" hidden></p>
+          <p id="part-status" class="sr-only" role="status"></p>
+          <div id="results" hidden></div>
+          <div id="stage"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Free pilot · Progress is saved on this device.</footer>
+  <noscript><p class="shell">Enable JavaScript to use the notation library and practise cards.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

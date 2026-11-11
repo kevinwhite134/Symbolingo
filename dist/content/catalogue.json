@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "lcCurriculum": {
+    "id": "ireland-lc-maths-2015",
+    "label": "Leaving Certificate Mathematics syllabus for examination from 2015",
+    "source": "https://ncca.ie/media/2122/lc-mathematics-syllabus.pdf",
+    "levels": [
+      "ordinary",
+      "higher"
+    ]
+  },
+  "universityReference": "https://www.maths.tcd.ie/undergraduate/modules/allmods.php",
+  "topics": {
+    "lc": [
+      {
+        "id": "lc-statistics",
+        "title": "Statistics and Probability"
+      },
+      {
+        "id": "lc-geometry",
+        "title": "Geometry and Trigonometry"
+      },
+      {
+        "id": "lc-number",
+        "title": "Number"
+      },
+      {
+        "id": "lc-algebra",
+        "title": "Algebra"
+      },
+      {
+        "id": "lc-functions",
+        "title": "Functions"
+      }
+    ],
+    "uni": [
+      {
+        "id": "foundations",
+        "title": "Foundations and proofs"
+      },
+      {
+        "id": "discrete",
+        "title": "Discrete maths and computing"
+      },
+      {
+        "id": "number-theory",
+        "title": "Number theory"
+      },
+      {
+        "id": "linear-algebra",
+        "title": "Linear algebra"
+      },
+      {
+        "id": "abstract-algebra",
+        "title": "Abstract algebra"
+      },
+      {
+        "id": "calculus",
+        "title": "Calculus"
+      },
+      {
+        "id": "analysis",
+        "title": "Real and complex analysis"
+      },
+      {
+        "id": "topology",
+        "title": "Geometry and topology"
+      },
+      {
+        "id": "differential-equations",
+        "title": "Differential equations"
+      },
+      {
+        "id": "probability",
+        "title": "Probability and stochastic processes"
+      },
+      {
+        "id": "statistics",
+        "title": "Statistics"
+      },
+      {
+        "id": "numerical",
+        "title": "Numerical methods and optimisation"
+      },
+      {
+        "id": "modelling",
+        "title": "Applied maths and modelling"
+      }
+    ]
+  },
+  "packs": [
+    "lc-statistics.json",
+    "lc-geometry.json",
+    "lc-number.json",
+    "lc-algebra.json",
+    "lc-functions.json",
+    "foundations.json",
+    "discrete.json",
+    "number-theory.json",
+    "linear-algebra.json",
+    "abstract-algebra.json",
+    "calculus.json",
+    "analysis.json",
+    "topology.json",
+    "differential-equations.json",
+    "probability.json",
+    "statistics.json",
+    "numerical.json",
+    "modelling.json"
+  ],
+  "order": {
+    "lc-statistics": [
+      "probability-event",
+      "sample-space",
+      "sample-mean",
+      "factorial",
+      "probability-complement"
+    ],
+    "lc-geometry": [
+      "angle-three-points",
+      "parallel-lines",
+      "triangle-congruence",
+      "coordinate-slope"
+    ],
+    "lc-number": [
+      "integers",
+      "rational-numbers",
+      "real-numbers",
+      "negative-index"
+    ],
+    "lc-algebra": [
+      "distributive-law",
+      "factorisation",
+      "quadratic-formula"
+    ],
+    "lc-functions": [
+      "function-value",
+      "function-root",
+      "composition",
+      "derivative"
+    ]
+  }
+}
